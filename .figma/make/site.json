@@ -1,0 +1,10 @@
+{
+  "description": "Provides clear project overview details to help teams track progress, deadlines, and key information for efficient project management.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
