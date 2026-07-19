@@ -2,6 +2,10 @@
 import Hls from 'hls.js'
 import { Link, Route, Routes, useLocation, useParams } from 'react-router-dom'
 import marksdLogo from './imports/log_MARKSD.jpeg'
+import hyrusHero from './assets/images/hyrus/hero.webp'
+import hyrusProcessing from './assets/images/hyrus/processing.webp'
+import hyrusWarehouse from './assets/images/hyrus/warehouse.webp'
+import hyrusRecycling from './assets/images/hyrus/recycling.webp'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -159,12 +163,12 @@ const COMPANIES: Company[] = [
     ],
     description:
       'Ferrous and non-ferrous scrap trading, industrial scrap collection, metal sorting, processing, bulk supply, and sustainable recycling solutions for manufacturers and foundries.',
-    image: 'https://images.unsplash.com/photo-1621905251189-08b95d50479f?w=1200&h=800&fit=crop&auto=format&dpr=2',
+    image: hyrusHero,
     gallery: [
-      'https://images.unsplash.com/photo-1590247813693-5541d1c609fd?w=800&h=600&fit=crop&auto=format',
-      'https://images.unsplash.com/photo-1618588507383-aa0f109cc2f4?w=800&h=600&fit=crop&auto=format',
-      'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop&auto=format',
-      'https://images.unsplash.com/photo-1565193566672-2a1418d000a0?w=800&h=600&fit=crop&auto=format',
+      hyrusProcessing,
+      hyrusWarehouse,
+      hyrusRecycling,
+      hyrusProcessing,
     ],
     tags: ['Scrap Trading', 'Metal Recycling', 'Industrial Supply'],
   },
