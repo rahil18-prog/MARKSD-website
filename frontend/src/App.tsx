@@ -2,10 +2,10 @@
 import Hls from 'hls.js'
 import { Link, Route, Routes, useLocation, useParams } from 'react-router-dom'
 import marksdLogo from './imports/log_MARKSD.jpeg'
-import hyrusHero from "./assets/images/hyrus/hero.jpg";
-import hyrusProcessing from "./assets/images/hyrus/metal-processing.jpg";
-import hyrusWarehouse from "./assets/images/hyrus/warehouse.jpg";
-import hyrusRecycling from "./assets/images/hyrus/recycling.jpg";
+import hyrusHero from "./assets/images/hyrus/hero.webp";
+import hyrusProcessing from "./assets/images/hyrus/processing.webp";
+import hyrusWarehouse from "./assets/images/hyrus/warehouse.webp";
+import hyrusRecycling from "./assets/images/hyrus/recycling.webp";
 // ─── Types ────────────────────────────────────────────────────────────────────
 
 interface Company {
