@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react'
+﻿import { useState, useEffect, useRef, useCallback } from 'react'
 import Hls from 'hls.js'
 import { Link, Route, Routes, useLocation, useParams } from 'react-router-dom'
 import marksdLogo from './imports/log_MARKSD.jpeg'
@@ -209,16 +209,16 @@ function LoadingScreen({ done }: { done: boolean }) {
           <div
             className="absolute inset-0 rounded-full border-2 border-transparent"
             style={{
-              borderTopColor: '#D4AF37',
-              borderRightColor: 'rgba(212,175,55,0.2)',
+              borderTopColor: '#C8A54B',
+              borderRightColor: 'rgba(200,165,75,0.2)',
               animation: 'spin-slow 1.2s linear infinite',
             }}
           />
           <div
             className="absolute inset-2 rounded-full border border-transparent"
             style={{
-              borderBottomColor: '#E6C86E',
-              borderLeftColor: 'rgba(230,200,110,0.15)',
+              borderBottomColor: '#D9BE72',
+              borderLeftColor: 'rgba(217,190,114,0.15)',
               animation: 'spin-slow 2s linear infinite reverse',
             }}
           />
@@ -226,7 +226,7 @@ function LoadingScreen({ done }: { done: boolean }) {
             src={marksdLogo}
             alt="MARKSD Group of Companies"
             className="w-16 h-16 rounded-full object-contain bg-black/20 p-1"
-            style={{ filter: 'drop-shadow(0 0 12px rgba(212,175,55,0.28))' }}
+            style={{ filter: 'drop-shadow(0 0 12px rgba(200,165,75,0.28))' }}
           />
         </div>
 
@@ -236,7 +236,7 @@ function LoadingScreen({ done }: { done: boolean }) {
             <div
               key={i}
               className="w-1.5 h-1.5 rounded-full animate-dot"
-              style={{ background: '#D4AF37', animationDelay: `${i * 0.25}s` }}
+              style={{ background: '#C8A54B', animationDelay: `${i * 0.25}s` }}
             />
           ))}
         </div>
@@ -296,7 +296,7 @@ function Navbar() {
         style={{
           background: scrolled ? 'rgba(5,5,5,0.94)' : 'transparent',
           backdropFilter: scrolled ? 'blur(20px)' : 'none',
-          borderBottom: scrolled ? '1px solid rgba(212,175,55,0.18)' : 'none',
+          borderBottom: scrolled ? '1px solid rgba(200,165,75,0.18)' : 'none',
         }}
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -306,14 +306,14 @@ function Navbar() {
               src={marksdLogo}
               alt="MARKSD Group of Companies"
               className="w-10 h-10 rounded-lg object-contain bg-black/20 p-0.5"
-              style={{ filter: 'drop-shadow(0 0 10px rgba(212,175,55,0.22))' }}
+              style={{ filter: 'drop-shadow(0 0 10px rgba(200,165,75,0.22))' }}
             />
             <div>
-              <span style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 16, letterSpacing: '0.1em', color: '#F5F5F5' }}>
+              <span style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 16, letterSpacing: '0.1em', color: '#F4F4F4' }}>
                 MARKSD
               </span>
               <span
-                style={{ display: 'block', fontSize: 9, letterSpacing: '0.25em', color: 'rgba(212,175,55,0.7)', marginTop: -2 }}
+                style={{ display: 'block', fontSize: 9, letterSpacing: '0.25em', color: 'rgba(200,165,75,0.7)', marginTop: -2 }}
               >
                 GROUP OF COMPANIES
               </span>
@@ -327,9 +327,9 @@ function Navbar() {
                 key={l}
                 href={resolveAnchor(l)}
                 className="nav-link text-sm font-semibold transition-colors duration-200"
-                style={{ color: activeSection === l.toLowerCase() && isHome ? '#D4AF37' : 'rgba(181,181,181,0.96)', letterSpacing: '0.03em' }}
-                onMouseEnter={(e) => ((e.target as HTMLElement).style.color = '#D4AF37')}
-                onMouseLeave={(e) => ((e.target as HTMLElement).style.color = activeSection === l.toLowerCase() && isHome ? '#D4AF37' : 'rgba(181,181,181,0.96)')}
+                style={{ color: activeSection === l.toLowerCase() && isHome ? '#C8A54B' : 'rgba(181,181,181,0.96)', letterSpacing: '0.03em' }}
+                onMouseEnter={(e) => ((e.target as HTMLElement).style.color = '#C8A54B')}
+                onMouseLeave={(e) => ((e.target as HTMLElement).style.color = activeSection === l.toLowerCase() && isHome ? '#C8A54B' : 'rgba(181,181,181,0.96)')}
               >
                 {l}
               </a>
@@ -354,7 +354,7 @@ function Navbar() {
               <div
                 key={i}
                 className="w-6 h-0.5 transition-all duration-300"
-                style={{ background: '#D4AF37' }}
+                style={{ background: '#C8A54B' }}
               />
             ))}
           </button>
@@ -373,7 +373,7 @@ function Navbar() {
       >
         <button
           className="absolute top-6 right-6 text-3xl"
-          style={{ color: '#D4AF37' }}
+          style={{ color: '#C8A54B' }}
           onClick={() => setMenuOpen(false)}
         >
           ×
@@ -386,7 +386,7 @@ function Navbar() {
               className="text-2xl font-bold tracking-widest transition-colors duration-200"
               style={{ color: 'rgba(255,255,255,0.8)', animationDelay: `${i * 0.08}s` }}
               onClick={() => setMenuOpen(false)}
-              onMouseEnter={(e) => ((e.target as HTMLElement).style.color = '#D4AF37')}
+              onMouseEnter={(e) => ((e.target as HTMLElement).style.color = '#C8A54B')}
               onMouseLeave={(e) => ((e.target as HTMLElement).style.color = 'rgba(255,255,255,0.8)')}
             >
               {l.toUpperCase()}
@@ -456,7 +456,7 @@ function Hero() {
           <div
             key={p}
             className="absolute top-0 bottom-0 w-px"
-            style={{ left: `${p}%`, background: 'rgba(212,175,55,0.15)' }}
+            style={{ left: `${p}%`, background: 'rgba(200,165,75,0.15)' }}
           />
         ))}
       </div>
@@ -470,7 +470,7 @@ function Hero() {
           transform: 'translate(-50%, -50%)',
           width: 700,
           height: 200,
-          background: 'radial-gradient(ellipse, rgba(212,175,55,0.18) 0%, rgba(201,162,39,0.1) 40%, transparent 70%)',
+          background: 'radial-gradient(ellipse, rgba(200,165,75,0.18) 0%, rgba(184,146,50,0.1) 40%, transparent 70%)',
           filter: 'blur(25px)',
         }}
       />
@@ -494,7 +494,7 @@ function Hero() {
             backdropFilter: 'blur(4px)',
             WebkitBackdropFilter: 'blur(4px)',
             backgroundBlendMode: 'luminosity',
-            boxShadow: 'inset 0 1px 1px rgba(230,200,110,0.18), 0 12px 28px rgba(0,0,0,0.34)',
+            boxShadow: 'inset 0 1px 1px rgba(217,190,114,0.18), 0 12px 28px rgba(0,0,0,0.34)',
           }}
         >
           {/* Premium gradient border */}
@@ -502,8 +502,8 @@ function Hero() {
             className="absolute inset-0 rounded-2xl pointer-events-none"
             style={{
               padding: '1.4px',
-              background: 'linear-gradient(180deg, rgba(230,200,110,0.28) 0%, rgba(15,15,15,0.86) 100%)',
-              WebkitMask: 'linear-gradient(#F5F5F5 0 0) content-box, linear-gradient(#F5F5F5 0 0)',
+              background: 'linear-gradient(180deg, rgba(217,190,114,0.28) 0%, rgba(15,15,15,0.86) 100%)',
+              WebkitMask: 'linear-gradient(#F4F4F4 0 0) content-box, linear-gradient(#F4F4F4 0 0)',
               WebkitMaskComposite: 'xor',
               maskComposite: 'exclude',
             }}
@@ -513,12 +513,12 @@ function Hero() {
               src={marksdLogo}
               alt="MARKSD Group of Companies"
               className="w-20 h-20 rounded-xl object-contain bg-black/20 p-1"
-              style={{ filter: 'drop-shadow(0 0 12px rgba(212,175,55,0.24))' }}
+              style={{ filter: 'drop-shadow(0 0 12px rgba(200,165,75,0.24))' }}
             />
             <p style={{ fontSize: 10, letterSpacing: '0.2em', color: 'rgba(181,181,181,0.9)', textAlign: 'center' }}>
               ENTERPRISE GROUP
             </p>
-            <p style={{ fontSize: 11, color: 'rgba(212,175,55,0.8)', textAlign: 'center', fontWeight: 600 }}>
+            <p style={{ fontSize: 11, color: 'rgba(200,165,75,0.8)', textAlign: 'center', fontWeight: 600 }}>
               6+ Companies
             </p>
           </div>
@@ -530,9 +530,9 @@ function Hero() {
         <div className="max-w-3xl">
         {/* Eyebrow */}
         <div className="flex items-center gap-3 mb-5 md:mb-6 fade-up" style={{ animationDelay: '0.2s' }}>
-          <div className="w-2 h-2 rounded-full animate-dot" style={{ background: '#C9A227' }} />
+          <div className="w-2 h-2 rounded-full animate-dot" style={{ background: '#B89232' }} />
           <span
-            style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.3em', color: '#C9A227', textTransform: 'uppercase' }}
+            style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.3em', color: '#B89232', textTransform: 'uppercase' }}
           >
             Diversified Business Group
           </span>
@@ -548,14 +548,14 @@ function Hero() {
             lineHeight: 1.05,
             letterSpacing: '0.02em',
             textTransform: 'uppercase',
-            color: '#F5F5F5',
+            color: '#F4F4F4',
             maxWidth: 780,
             animationDelay: '0.35s',
           }}
         >
           BUILDING TOMORROW
           <br />
-          ACROSS INDUSTRIES<span style={{ color: '#C9A227' }}>.</span>
+          ACROSS INDUSTRIES<span style={{ color: '#B89232' }}>.</span>
         </h1>
 
         {/* Description */}
@@ -599,11 +599,11 @@ function Hero() {
         {/* Stats bar */}
         <div
           className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 mt-10 md:mt-14 pt-7 md:pt-8 fade-up"
-          style={{ borderTop: '1px solid rgba(212,175,55,0.2)', animationDelay: '0.8s' }}
+          style={{ borderTop: '1px solid rgba(200,165,75,0.2)', animationDelay: '0.8s' }}
         >
           {STATS.map((s) => (
             <div key={s.label} className="min-w-0">
-              <p style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 28, color: '#D4AF37', lineHeight: 1 }}>{s.value}</p>
+              <p style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 28, color: '#C8A54B', lineHeight: 1 }}>{s.value}</p>
               <p style={{ fontSize: 12, color: 'rgba(181,181,181,0.84)', marginTop: 4, letterSpacing: '0.05em' }}>{s.label}</p>
             </div>
           ))}
@@ -638,10 +638,10 @@ function CompanyCard({ company }: { company: Company }) {
       className="relative rounded-2xl overflow-hidden cursor-pointer group h-full flex flex-col"
       style={{
         background: 'rgba(22,22,22,0.72)',
-        border: '1px solid rgba(212,175,55,0.18)',
+        border: '1px solid rgba(200,165,75,0.18)',
         transform: hovered ? `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg) scale(1.02)` : 'perspective(1000px) rotateX(0) rotateY(0) scale(1)',
         transition: 'transform 0.15s ease, box-shadow 0.3s ease',
-        boxShadow: hovered ? '0 20px 60px rgba(212,175,55,0.12), 0 0 0 1px rgba(212,175,55,0.1)' : 'none',
+        boxShadow: hovered ? '0 20px 60px rgba(200,165,75,0.12), 0 0 0 1px rgba(200,165,75,0.1)' : 'none',
       }}
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setHovered(true)}
@@ -661,7 +661,7 @@ function CompanyCard({ company }: { company: Company }) {
         {/* Category badge */}
         <div
           className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold"
-          style={{ background: 'rgba(212,175,55,0.15)', border: '1px solid rgba(212,175,55,0.25)', color: '#D4AF37', letterSpacing: '0.05em' }}
+          style={{ background: 'rgba(200,165,75,0.15)', border: '1px solid rgba(200,165,75,0.25)', color: '#C8A54B', letterSpacing: '0.05em' }}
         >
           {company.category}
         </div>
@@ -669,10 +669,10 @@ function CompanyCard({ company }: { company: Company }) {
 
       {/* Content */}
       <div className="p-6 flex flex-col h-full">
-        <h3 style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 20, color: '#F5F5F5', marginBottom: 4 }}>
+        <h3 style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 20, color: '#F4F4F4', marginBottom: 4 }}>
           {company.name}
         </h3>
-        <p style={{ fontSize: 12, color: 'rgba(212,175,55,0.7)', marginBottom: 12, letterSpacing: '0.03em' }}>
+        <p style={{ fontSize: 12, color: 'rgba(200,165,75,0.7)', marginBottom: 12, letterSpacing: '0.03em' }}>
           {company.fullName}
         </p>
         {company.location && (
@@ -688,7 +688,7 @@ function CompanyCard({ company }: { company: Company }) {
             <span
               key={tag}
               className="px-2.5 py-1 rounded-lg text-xs font-medium"
-              style={{ background: 'rgba(22,22,22,0.82)', border: '1px solid rgba(212,175,55,0.2)', color: 'rgba(181,181,181,0.9)' }}
+              style={{ background: 'rgba(22,22,22,0.82)', border: '1px solid rgba(200,165,75,0.2)', color: 'rgba(181,181,181,0.9)' }}
             >
               {tag}
             </span>
@@ -711,7 +711,7 @@ function CompanyCard({ company }: { company: Company }) {
       {hovered && (
         <div
           className="absolute inset-0 pointer-events-none rounded-2xl"
-          style={{ background: 'radial-gradient(circle at 50% 0%, rgba(212,175,55,0.06) 0%, transparent 70%)' }}
+          style={{ background: 'radial-gradient(circle at 50% 0%, rgba(200,165,75,0.06) 0%, transparent 70%)' }}
         />
       )}
     </div>
@@ -725,7 +725,7 @@ function CompaniesSection() {
     <section id="companies" className="py-28 relative">
       <div className="max-w-7xl mx-auto px-6">
         <SectionLabel text="OUR COMPANIES" />
-        <h2 className="section-heading mb-4" style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 'clamp(32px,5vw,56px)', color: '#F5F5F5', lineHeight: 1.1, letterSpacing: '0.02em' }}>
+        <h2 className="section-heading mb-4" style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 'clamp(32px,5vw,56px)', color: '#F4F4F4', lineHeight: 1.1, letterSpacing: '0.02em' }}>
           A Portfolio of Excellence
         </h2>
         <p style={{ color: 'rgba(181,181,181,0.9)', fontSize: 16, maxWidth: 540, lineHeight: 1.7, marginBottom: 48 }}>
@@ -744,7 +744,7 @@ function CompaniesSection() {
             className="section-reveal rounded-2xl p-8 flex flex-col items-center justify-center text-center min-h-80 relative overflow-hidden"
             style={{
               background: 'rgba(15,15,15,0.72)',
-              border: '1px solid rgba(212,175,55,0.18)',
+              border: '1px solid rgba(200,165,75,0.18)',
               transitionDelay: '0.48s',
             }}
           >
@@ -754,22 +754,22 @@ function CompaniesSection() {
                 <div
                   key={i}
                   className="w-2 h-2 rounded-full animate-dot"
-                  style={{ background: '#D4AF37', animationDelay: `${i * 0.3}s`, opacity: 0.6 }}
+                  style={{ background: '#C8A54B', animationDelay: `${i * 0.3}s`, opacity: 0.6 }}
                 />
               ))}
             </div>
 
             <div
               className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
-              style={{ background: 'rgba(212,175,55,0.08)', border: '1px dashed rgba(212,175,55,0.3)' }}
+              style={{ background: 'rgba(200,165,75,0.08)', border: '1px dashed rgba(200,165,75,0.3)' }}
             >
-              <span style={{ fontSize: 28, color: '#D4AF37' }}>+</span>
+              <span style={{ fontSize: 28, color: '#C8A54B' }}>+</span>
             </div>
 
-            <h3 style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 700, fontSize: 18, color: '#F5F5F5', marginBottom: 8 }}>
+            <h3 style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 700, fontSize: 18, color: '#F4F4F4', marginBottom: 8 }}>
               MORE COMPANIES
             </h3>
-            <p style={{ fontSize: 13, letterSpacing: '0.15em', color: '#D4AF37', marginBottom: 16, fontWeight: 600 }}>
+            <p style={{ fontSize: 13, letterSpacing: '0.15em', color: '#C8A54B', marginBottom: 16, fontWeight: 600 }}>
               COMING SOON
             </p>
             <p style={{ fontSize: 14, color: 'rgba(181,181,181,0.8)', lineHeight: 1.65 }}>
@@ -779,7 +779,7 @@ function CompaniesSection() {
             {/* Background glow */}
             <div
               className="absolute inset-0 pointer-events-none"
-              style={{ background: 'radial-gradient(circle at 50% 100%, rgba(212,175,55,0.04) 0%, transparent 60%)' }}
+              style={{ background: 'radial-gradient(circle at 50% 100%, rgba(200,165,75,0.04) 0%, transparent 60%)' }}
             />
           </div>
         </div>
@@ -796,7 +796,7 @@ function AboutSection() {
       {/* BG accent */}
       <div
         className="absolute pointer-events-none"
-        style={{ top: '10%', right: '-20%', width: 600, height: 600, background: 'radial-gradient(circle, rgba(212,175,55,0.04) 0%, transparent 70%)', borderRadius: '50%' }}
+        style={{ top: '10%', right: '-20%', width: 600, height: 600, background: 'radial-gradient(circle, rgba(200,165,75,0.04) 0%, transparent 70%)', borderRadius: '50%' }}
       />
 
       <div className="max-w-7xl mx-auto px-6">
@@ -804,9 +804,9 @@ function AboutSection() {
           {/* Left */}
           <div>
             <SectionLabel text="ABOUT MARKSD" />
-            <h2 style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 'clamp(32px,4vw,52px)', color: '#F5F5F5', lineHeight: 1.1, letterSpacing: '0.02em', marginBottom: 24 }}>
+            <h2 style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 'clamp(32px,4vw,52px)', color: '#F4F4F4', lineHeight: 1.1, letterSpacing: '0.02em', marginBottom: 24 }}>
               A Decade of{' '}
-              <span className="font-serif-italic" style={{ color: '#D4AF37' }}>
+              <span className="font-serif-italic" style={{ color: '#C8A54B' }}>
                 Building
               </span>{' '}
               Excellence
@@ -830,16 +830,16 @@ function AboutSection() {
                 <div
                   key={item.title}
                   className="p-5 rounded-xl"
-                  style={{ background: 'rgba(22,22,22,0.72)', border: '1px solid rgba(212,175,55,0.18)' }}
+                  style={{ background: 'rgba(22,22,22,0.72)', border: '1px solid rgba(200,165,75,0.18)' }}
                 >
-                  <h4 style={{ fontWeight: 700, fontSize: 14, color: '#D4AF37', marginBottom: 8, letterSpacing: '0.05em' }}>{item.title}</h4>
+                  <h4 style={{ fontWeight: 700, fontSize: 14, color: '#C8A54B', marginBottom: 8, letterSpacing: '0.05em' }}>{item.title}</h4>
                   <p style={{ fontSize: 13, lineHeight: 1.65, color: 'rgba(181,181,181,0.92)' }}>{item.text}</p>
                 </div>
               ))}
             </div>
 
             {/* Values */}
-            <h3 style={{ fontWeight: 700, fontSize: 16, color: '#F5F5F5', marginBottom: 16, letterSpacing: '0.05em' }}>CORE VALUES</h3>
+            <h3 style={{ fontWeight: 700, fontSize: 16, color: '#F4F4F4', marginBottom: 16, letterSpacing: '0.05em' }}>CORE VALUES</h3>
             <div className="space-y-3">
               {VALUES.map((v) => (
                 <div key={v.title} className="flex items-start gap-4 p-4 rounded-xl transition-all duration-200 group cursor-default"
@@ -849,12 +849,12 @@ function AboutSection() {
                 >
                   <span
                     className="w-6 h-6 mt-0.5 rounded-full flex items-center justify-center text-[10px] font-bold"
-                    style={{ background: 'rgba(212,175,55,0.15)', color: '#D4AF37', border: '1px solid rgba(212,175,55,0.25)' }}
+                    style={{ background: 'rgba(200,165,75,0.15)', color: '#C8A54B', border: '1px solid rgba(200,165,75,0.25)' }}
                   >
                     {v.title.charAt(0)}
                   </span>
                   <div>
-                    <p style={{ fontWeight: 700, fontSize: 14, color: '#F5F5F5', marginBottom: 3 }}>{v.title}</p>
+                    <p style={{ fontWeight: 700, fontSize: 14, color: '#F4F4F4', marginBottom: 3 }}>{v.title}</p>
                     <p style={{ fontSize: 13, color: 'rgba(181,181,181,0.9)', lineHeight: 1.55 }}>{v.desc}</p>
                   </div>
                 </div>
@@ -870,7 +870,7 @@ function AboutSection() {
             <div className="relative lg:hidden">
               <div
                 className="absolute left-6 top-0 bottom-0 w-px"
-                style={{ background: 'linear-gradient(180deg, rgba(212,175,55,0.6) 0%, rgba(212,175,55,0.1) 100%)' }}
+                style={{ background: 'linear-gradient(180deg, rgba(200,165,75,0.6) 0%, rgba(200,165,75,0.1) 100%)' }}
               />
               <div className="space-y-0">
                 {TIMELINE.map((item, i) => (
@@ -878,15 +878,15 @@ function AboutSection() {
                     <div className="relative flex-shrink-0 w-12 flex justify-center">
                       <div
                         className="relative z-10 w-3 h-3 rounded-full mt-1.5 transition-all duration-300 group-hover:scale-125"
-                        style={{ background: i === 0 ? '#D4AF37' : 'rgba(212,175,55,0.4)', boxShadow: i === 0 ? '0 0 12px rgba(212,175,55,0.6)' : 'none' }}
+                        style={{ background: i === 0 ? '#C8A54B' : 'rgba(200,165,75,0.4)', boxShadow: i === 0 ? '0 0 12px rgba(200,165,75,0.6)' : 'none' }}
                       />
                     </div>
                     <div className="pb-10">
                       <div className="flex items-center gap-3 mb-1 flex-wrap">
-                        <span style={{ fontSize: 12, fontWeight: 700, color: '#D4AF37', letterSpacing: '0.05em' }}>{item.stage}</span>
+                        <span style={{ fontSize: 12, fontWeight: 700, color: '#C8A54B', letterSpacing: '0.05em' }}>{item.stage}</span>
                         <span
                           className="px-2.5 py-0.5 rounded-full text-xs font-semibold"
-                          style={{ background: 'rgba(212,175,55,0.1)', color: '#D4AF37', border: '1px solid rgba(212,175,55,0.2)' }}
+                          style={{ background: 'rgba(200,165,75,0.1)', color: '#C8A54B', border: '1px solid rgba(200,165,75,0.2)' }}
                         >
                           {item.label}
                         </span>
@@ -900,13 +900,13 @@ function AboutSection() {
 
             <div className="hidden lg:grid lg:grid-cols-4 gap-4">
               {TIMELINE.map((item, i) => (
-                <div key={i} className="relative p-4 rounded-xl" style={{ background: 'rgba(15,15,15,0.72)', border: '1px solid rgba(212,175,55,0.16)' }}>
-                  <div className="absolute -top-1 left-4 w-3 h-3 rounded-full" style={{ background: i === 0 ? '#D4AF37' : 'rgba(212,175,55,0.5)' }} />
+                <div key={i} className="relative p-4 rounded-xl" style={{ background: 'rgba(15,15,15,0.72)', border: '1px solid rgba(200,165,75,0.16)' }}>
+                  <div className="absolute -top-1 left-4 w-3 h-3 rounded-full" style={{ background: i === 0 ? '#C8A54B' : 'rgba(200,165,75,0.5)' }} />
                   <div className="mb-2 mt-2">
-                    <p style={{ fontSize: 12, fontWeight: 700, color: '#D4AF37', letterSpacing: '0.05em' }}>{item.stage}</p>
+                    <p style={{ fontSize: 12, fontWeight: 700, color: '#C8A54B', letterSpacing: '0.05em' }}>{item.stage}</p>
                     <span
                       className="inline-block mt-1 px-2.5 py-0.5 rounded-full text-xs font-semibold"
-                      style={{ background: 'rgba(212,175,55,0.1)', color: '#D4AF37', border: '1px solid rgba(212,175,55,0.2)' }}
+                      style={{ background: 'rgba(200,165,75,0.1)', color: '#C8A54B', border: '1px solid rgba(200,165,75,0.2)' }}
                     >
                       {item.label}
                     </span>
@@ -931,11 +931,11 @@ function IndustriesSection() {
     <section id="industries" className="py-28 relative">
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{ background: 'linear-gradient(180deg, transparent, rgba(212,175,55,0.03) 50%, transparent)' }}
+        style={{ background: 'linear-gradient(180deg, transparent, rgba(200,165,75,0.03) 50%, transparent)' }}
       />
       <div className="max-w-7xl mx-auto px-6">
         <SectionLabel text="INDUSTRIES" />
-        <h2 style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 'clamp(32px,5vw,56px)', color: '#F5F5F5', lineHeight: 1.1, letterSpacing: '0.02em', marginBottom: 16 }}>
+        <h2 style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 'clamp(32px,5vw,56px)', color: '#F4F4F4', lineHeight: 1.1, letterSpacing: '0.02em', marginBottom: 16 }}>
           Where We Operate
         </h2>
         <p style={{ color: 'rgba(181,181,181,0.9)', fontSize: 16, maxWidth: 480, lineHeight: 1.7, marginBottom: 48 }}>
@@ -948,10 +948,10 @@ function IndustriesSection() {
               key={ind.label}
               className="p-6 rounded-2xl text-center cursor-pointer transition-all duration-300"
               style={{
-                background: active === i ? 'rgba(212,175,55,0.08)' : 'rgba(22,22,22,0.72)',
-                border: active === i ? '1px solid rgba(212,175,55,0.3)' : '1px solid rgba(212,175,55,0.15)',
+                background: active === i ? 'rgba(200,165,75,0.08)' : 'rgba(22,22,22,0.72)',
+                border: active === i ? '1px solid rgba(200,165,75,0.3)' : '1px solid rgba(200,165,75,0.15)',
                 transform: active === i ? 'translateY(-6px)' : 'none',
-                boxShadow: active === i ? '0 8px 32px rgba(212,175,55,0.12)' : 'none',
+                boxShadow: active === i ? '0 8px 32px rgba(200,165,75,0.12)' : 'none',
               }}
               onMouseEnter={() => setActive(i)}
               onMouseLeave={() => setActive(null)}
@@ -959,7 +959,7 @@ function IndustriesSection() {
               <div className="flex justify-center mb-3">
                 <IndustryIcon icon={ind.icon} active={active === i} />
               </div>
-              <p style={{ fontWeight: 700, fontSize: 14, color: active === i ? '#D4AF37' : '#F5F5F5', letterSpacing: '0.03em' }}>
+              <p style={{ fontWeight: 700, fontSize: 14, color: active === i ? '#C8A54B' : '#F4F4F4', letterSpacing: '0.03em' }}>
                 {ind.label}
               </p>
             </div>
@@ -977,13 +977,13 @@ function StatsSection() {
     <section className="py-28 relative overflow-hidden">
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(212,175,55,0.05) 0%, transparent 70%)' }}
+        style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(200,165,75,0.05) 0%, transparent 70%)' }}
       />
       <div className="max-w-7xl mx-auto px-6">
         <SectionLabel text="WHY CHOOSE MARKSD" />
-        <h2 style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 'clamp(32px,5vw,56px)', color: '#F5F5F5', lineHeight: 1.1, letterSpacing: '0.02em', marginBottom: 48 }}>
+        <h2 style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 'clamp(32px,5vw,56px)', color: '#F4F4F4', lineHeight: 1.1, letterSpacing: '0.02em', marginBottom: 48 }}>
           Numbers That{' '}
-          <span className="font-serif-italic" style={{ color: '#D4AF37' }}>Speak</span>
+          <span className="font-serif-italic" style={{ color: '#C8A54B' }}>Speak</span>
         </h2>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
@@ -991,11 +991,11 @@ function StatsSection() {
             <div
               key={s.label}
               className="p-8 rounded-2xl text-center transition-all duration-300 group cursor-default"
-              style={{ background: 'rgba(22,22,22,0.72)', border: '1px solid rgba(212,175,55,0.18)' }}
-              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.border = '1px solid rgba(212,175,55,0.2)'; (e.currentTarget as HTMLElement).style.background = 'rgba(212,175,55,0.04)' }}
-              onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.border = '1px solid rgba(212,175,55,0.18)'; (e.currentTarget as HTMLElement).style.background = 'rgba(22,22,22,0.72)' }}
+              style={{ background: 'rgba(22,22,22,0.72)', border: '1px solid rgba(200,165,75,0.18)' }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.border = '1px solid rgba(200,165,75,0.2)'; (e.currentTarget as HTMLElement).style.background = 'rgba(200,165,75,0.04)' }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.border = '1px solid rgba(200,165,75,0.18)'; (e.currentTarget as HTMLElement).style.background = 'rgba(22,22,22,0.72)' }}
             >
-              <p style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 48, color: '#D4AF37', lineHeight: 1 }}>{s.value}</p>
+              <p style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 48, color: '#C8A54B', lineHeight: 1 }}>{s.value}</p>
               <p style={{ fontSize: 13, color: 'rgba(181,181,181,0.9)', marginTop: 8, letterSpacing: '0.1em', textTransform: 'uppercase' }}>{s.label}</p>
             </div>
           ))}
@@ -1011,17 +1011,17 @@ function StatsSection() {
             <div
               key={item.title}
               className="p-8 rounded-2xl transition-all duration-300"
-              style={{ background: 'rgba(22,22,22,0.72)', border: '1px solid rgba(212,175,55,0.18)' }}
-              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.transform = 'translateY(-6px)'; (e.currentTarget as HTMLElement).style.boxShadow = '0 14px 42px rgba(212,175,55,0.12)' }}
+              style={{ background: 'rgba(22,22,22,0.72)', border: '1px solid rgba(200,165,75,0.18)' }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.transform = 'translateY(-6px)'; (e.currentTarget as HTMLElement).style.boxShadow = '0 14px 42px rgba(200,165,75,0.12)' }}
               onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.transform = 'none'; (e.currentTarget as HTMLElement).style.boxShadow = 'none' }}
             >
               <span
                 className="inline-flex items-center justify-center w-11 h-11 rounded-full mb-4"
-                style={{ background: 'rgba(212,175,55,0.12)', color: '#D4AF37', border: '1px solid rgba(212,175,55,0.25)', fontWeight: 700, letterSpacing: '0.08em', fontSize: 12 }}
+                style={{ background: 'rgba(200,165,75,0.12)', color: '#C8A54B', border: '1px solid rgba(200,165,75,0.25)', fontWeight: 700, letterSpacing: '0.08em', fontSize: 12 }}
               >
                 {item.marker}
               </span>
-              <h3 style={{ fontWeight: 700, fontSize: 18, color: '#F5F5F5', marginBottom: 10 }}>{item.title}</h3>
+              <h3 style={{ fontWeight: 700, fontSize: 18, color: '#F4F4F4', marginBottom: 10 }}>{item.title}</h3>
               <p style={{ fontSize: 14, lineHeight: 1.7, color: 'rgba(181,181,181,0.92)' }}>{item.desc}</p>
             </div>
           ))}
@@ -1059,9 +1059,9 @@ function TestimonialsSection() {
     <section className="py-28 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <SectionLabel text="TESTIMONIALS" />
-        <h2 style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 'clamp(32px,5vw,56px)', color: '#F5F5F5', lineHeight: 1.1, letterSpacing: '0.02em', marginBottom: 48 }}>
+        <h2 style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 'clamp(32px,5vw,56px)', color: '#F4F4F4', lineHeight: 1.1, letterSpacing: '0.02em', marginBottom: 48 }}>
           Trusted by{' '}
-          <span className="font-serif-italic" style={{ color: '#D4AF37' }}>Leaders</span>
+          <span className="font-serif-italic" style={{ color: '#C8A54B' }}>Leaders</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -1069,23 +1069,23 @@ function TestimonialsSection() {
             <div
               key={t.name}
               className="p-8 rounded-2xl relative transition-all duration-300"
-              style={{ background: 'rgba(22,22,22,0.72)', border: '1px solid rgba(212,175,55,0.18)' }}
-              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.border = '1px solid rgba(212,175,55,0.15)' }}
-              onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.border = '1px solid rgba(212,175,55,0.18)' }}
+              style={{ background: 'rgba(22,22,22,0.72)', border: '1px solid rgba(200,165,75,0.18)' }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.border = '1px solid rgba(200,165,75,0.15)' }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.border = '1px solid rgba(200,165,75,0.18)' }}
             >
-              <div style={{ fontSize: 40, color: 'rgba(212,175,55,0.3)', lineHeight: 1, marginBottom: 16, fontFamily: 'Georgia' }}>"</div>
+              <div style={{ fontSize: 40, color: 'rgba(200,165,75,0.3)', lineHeight: 1, marginBottom: 16, fontFamily: 'Georgia' }}>"</div>
               <p style={{ fontSize: 15, lineHeight: 1.75, color: 'rgba(255,255,255,0.7)', marginBottom: 24, fontStyle: 'italic' }}>
                 {t.quote}
               </p>
               <div className="flex items-center gap-3">
                 <div
                   className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
-                  style={{ background: 'linear-gradient(135deg, #D4AF37, #E6C86E)' }}
+                  style={{ background: 'linear-gradient(135deg, #C8A54B, #D9BE72)' }}
                 >
                   <span style={{ fontSize: 12, fontWeight: 700, color: '#050505' }}>{t.initials}</span>
                 </div>
                 <div>
-                  <p style={{ fontSize: 14, fontWeight: 700, color: '#F5F5F5' }}>{t.name}</p>
+                  <p style={{ fontSize: 14, fontWeight: 700, color: '#F4F4F4' }}>{t.name}</p>
                   <p style={{ fontSize: 12, color: 'rgba(181,181,181,0.8)' }}>{t.role}</p>
                 </div>
               </div>
@@ -1105,20 +1105,20 @@ function GlobalPresence() {
       <div className="max-w-7xl mx-auto px-6">
         <div
           className="rounded-3xl p-12 md:p-16 relative overflow-hidden"
-          style={{ background: 'rgba(22,22,22,0.72)', border: '1px solid rgba(212,175,55,0.18)' }}
+          style={{ background: 'rgba(22,22,22,0.72)', border: '1px solid rgba(200,165,75,0.18)' }}
         >
           {/* BG glow */}
           <div
             className="absolute pointer-events-none"
-            style={{ top: '50%', left: '60%', transform: 'translate(-50%,-50%)', width: 500, height: 300, background: 'radial-gradient(ellipse, rgba(212,175,55,0.06), transparent 70%)', filter: 'blur(20px)' }}
+            style={{ top: '50%', left: '60%', transform: 'translate(-50%,-50%)', width: 500, height: 300, background: 'radial-gradient(ellipse, rgba(200,165,75,0.06), transparent 70%)', filter: 'blur(20px)' }}
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
             <div>
               <SectionLabel text="NATIONAL PRESENCE" />
-              <h2 style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 'clamp(28px,4vw,48px)', color: '#F5F5F5', lineHeight: 1.1, letterSpacing: '0.02em', marginBottom: 20 }}>
+              <h2 style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 'clamp(28px,4vw,48px)', color: '#F4F4F4', lineHeight: 1.1, letterSpacing: '0.02em', marginBottom: 20 }}>
                 Serving Clients Across{' '}
-                <span className="font-serif-italic" style={{ color: '#D4AF37' }}>India</span>
+                <span className="font-serif-italic" style={{ color: '#C8A54B' }}>India</span>
               </h2>
               <p style={{ fontSize: 15, lineHeight: 1.8, color: 'rgba(181,181,181,0.94)', marginBottom: 32 }}>
                 Headquartered in India, MARKSD Group operates throughout the country with integrated trade and export
@@ -1129,7 +1129,7 @@ function GlobalPresence() {
                   <span
                     key={region}
                     className="px-4 py-2 rounded-full text-sm font-medium"
-                    style={{ background: 'rgba(212,175,55,0.08)', border: '1px solid rgba(212,175,55,0.2)', color: '#D4AF37' }}
+                    style={{ background: 'rgba(200,165,75,0.08)', border: '1px solid rgba(200,165,75,0.2)', color: '#C8A54B' }}
                   >
                     {region}
                   </span>
@@ -1141,19 +1141,19 @@ function GlobalPresence() {
             <div className="relative h-64 flex items-center justify-center">
               <div
                 className="relative w-full h-full rounded-2xl overflow-hidden flex items-center justify-center"
-                style={{ background: 'rgba(0,0,0,0.3)', border: '1px solid rgba(212,175,55,0.15)' }}
+                style={{ background: 'rgba(0,0,0,0.3)', border: '1px solid rgba(200,165,75,0.15)' }}
               >
                 {/* Simplified world map dots */}
                 <div className="relative w-72 h-40">
                   {/* India highlighted dot */}
                   <div
                     className="absolute animate-pulse"
-                    style={{ top: '55%', left: '62%', width: 12, height: 12, borderRadius: '50%', background: '#D4AF37', boxShadow: '0 0 20px rgba(212,175,55,0.8)' }}
+                    style={{ top: '55%', left: '62%', width: 12, height: 12, borderRadius: '50%', background: '#C8A54B', boxShadow: '0 0 20px rgba(200,165,75,0.8)' }}
                   />
                   {/* Ripple */}
                   <div
                     className="absolute animate-ping"
-                    style={{ top: 'calc(55% - 4px)', left: 'calc(62% - 4px)', width: 20, height: 20, borderRadius: '50%', background: 'rgba(212,175,55,0.3)' }}
+                    style={{ top: 'calc(55% - 4px)', left: 'calc(62% - 4px)', width: 20, height: 20, borderRadius: '50%', background: 'rgba(200,165,75,0.3)' }}
                   />
                   {/* Other dots */}
                   {[
@@ -1164,18 +1164,18 @@ function GlobalPresence() {
                     <div
                       key={i}
                       className="absolute"
-                      style={{ top: pos.t, left: pos.l, width: 6, height: 6, borderRadius: '50%', background: 'rgba(201,162,39,0.45)', boxShadow: '0 0 8px rgba(201,162,39,0.35)' }}
+                      style={{ top: pos.t, left: pos.l, width: 6, height: 6, borderRadius: '50%', background: 'rgba(184,146,50,0.45)', boxShadow: '0 0 8px rgba(184,146,50,0.35)' }}
                     />
                   ))}
                   {/* Animated connection lines SVG */}
                   <svg className="absolute inset-0 w-full h-full" style={{ opacity: 0.35 }}>
-                    <line x1="55%" y1="55%" x2="56%" y2="45%" stroke="#D4AF37" strokeWidth="1" strokeDasharray="4 4">
+                    <line x1="55%" y1="55%" x2="56%" y2="45%" stroke="#C8A54B" strokeWidth="1" strokeDasharray="4 4">
                       <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="2s" repeatCount="indefinite" />
                     </line>
-                    <line x1="55%" y1="55%" x2="75%" y2="50%" stroke="#C9A227" strokeWidth="1" strokeDasharray="4 4">
+                    <line x1="55%" y1="55%" x2="75%" y2="50%" stroke="#B89232" strokeWidth="1" strokeDasharray="4 4">
                       <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="2.5s" repeatCount="indefinite" />
                     </line>
-                    <line x1="55%" y1="55%" x2="72%" y2="60%" stroke="#C9A227" strokeWidth="1" strokeDasharray="4 4">
+                    <line x1="55%" y1="55%" x2="72%" y2="60%" stroke="#B89232" strokeWidth="1" strokeDasharray="4 4">
                       <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="3s" repeatCount="indefinite" />
                     </line>
                   </svg>
@@ -1222,11 +1222,11 @@ function ContactSection() {
     <section id="contact" className="py-28 relative overflow-hidden">
       <div
         className="absolute pointer-events-none"
-        style={{ top: 0, left: '50%', transform: 'translateX(-50%)', width: 800, height: 400, background: 'radial-gradient(ellipse, rgba(212,175,55,0.05) 0%, transparent 70%)', filter: 'blur(40px)' }}
+        style={{ top: 0, left: '50%', transform: 'translateX(-50%)', width: 800, height: 400, background: 'radial-gradient(ellipse, rgba(200,165,75,0.05) 0%, transparent 70%)', filter: 'blur(40px)' }}
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <SectionLabel text="CONTACT" />
-        <h2 style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 'clamp(32px,5vw,56px)', color: '#F5F5F5', lineHeight: 1.1, letterSpacing: '0.02em', marginBottom: 12 }}>
+        <h2 style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 'clamp(32px,5vw,56px)', color: '#F4F4F4', lineHeight: 1.1, letterSpacing: '0.02em', marginBottom: 12 }}>
           Partner With MARKSD
         </h2>
         <p style={{ color: 'rgba(181,181,181,0.9)', fontSize: 16, maxWidth: 480, lineHeight: 1.7, marginBottom: 56 }}>
@@ -1244,16 +1244,16 @@ function ContactSection() {
               <div
                 key={item.label}
                 className="flex items-start gap-4 p-5 rounded-xl"
-                style={{ background: 'rgba(22,22,22,0.72)', border: '1px solid rgba(212,175,55,0.18)' }}
+                style={{ background: 'rgba(22,22,22,0.72)', border: '1px solid rgba(200,165,75,0.18)' }}
               >
                 <span
                   className="w-9 h-9 rounded-full flex items-center justify-center text-[10px] font-bold mt-0.5"
-                  style={{ background: 'rgba(212,175,55,0.12)', border: '1px solid rgba(212,175,55,0.22)', color: '#D4AF37' }}
+                  style={{ background: 'rgba(200,165,75,0.12)', border: '1px solid rgba(200,165,75,0.22)', color: '#C8A54B' }}
                 >
                   {item.icon}
                 </span>
                 <div>
-                  <p style={{ fontSize: 11, letterSpacing: '0.15em', color: '#D4AF37', fontWeight: 600, marginBottom: 4 }}>{item.label}</p>
+                  <p style={{ fontSize: 11, letterSpacing: '0.15em', color: '#C8A54B', fontWeight: 600, marginBottom: 4 }}>{item.label}</p>
                   <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)' }}>{item.value}</p>
                 </div>
               </div>
@@ -1261,9 +1261,9 @@ function ContactSection() {
 
             <div
               className="p-5 rounded-xl"
-              style={{ background: 'rgba(212,175,55,0.05)', border: '1px solid rgba(212,175,55,0.15)' }}
+              style={{ background: 'rgba(200,165,75,0.05)', border: '1px solid rgba(200,165,75,0.15)' }}
             >
-              <p style={{ fontWeight: 700, fontSize: 13, color: '#D4AF37', marginBottom: 8, letterSpacing: '0.05em' }}>BUSINESS HOURS</p>
+              <p style={{ fontWeight: 700, fontSize: 13, color: '#C8A54B', marginBottom: 8, letterSpacing: '0.05em' }}>BUSINESS HOURS</p>
               <p style={{ fontSize: 13, color: 'rgba(181,181,181,0.92)', lineHeight: 1.6 }}>
                 Monday – Saturday<br />
                 9:00 AM – 6:00 PM IST
@@ -1276,7 +1276,7 @@ function ContactSection() {
             <form
               onSubmit={handleSubmit}
               className="p-5 sm:p-8 rounded-2xl space-y-5"
-              style={{ background: 'rgba(22,22,22,0.72)', border: '1px solid rgba(212,175,55,0.18)' }}
+              style={{ background: 'rgba(22,22,22,0.72)', border: '1px solid rgba(200,165,75,0.18)' }}
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <FormField label="Full Name" value={form.name} onChange={(v) => setForm({ ...form, name: v })} placeholder="John Doe" required />
@@ -1303,12 +1303,12 @@ function ContactSection() {
                   className="w-full rounded-xl px-4 py-3 text-sm resize-none focus:outline-none transition-all duration-200"
                   style={{
                     background: 'rgba(22,22,22,0.78)',
-                    border: '1px solid rgba(212,175,55,0.22)',
-                    color: '#F5F5F5',
+                    border: '1px solid rgba(200,165,75,0.22)',
+                    color: '#F4F4F4',
                     fontFamily: 'Inter',
                   }}
-                  onFocus={(e) => ((e.target as HTMLElement).style.borderColor = 'rgba(212,175,55,0.4)')}
-                  onBlur={(e) => ((e.target as HTMLElement).style.borderColor = 'rgba(212,175,55,0.22)')}
+                  onFocus={(e) => ((e.target as HTMLElement).style.borderColor = 'rgba(200,165,75,0.4)')}
+                  onBlur={(e) => ((e.target as HTMLElement).style.borderColor = 'rgba(200,165,75,0.22)')}
                 />
               </div>
 
@@ -1320,7 +1320,7 @@ function ContactSection() {
                 {status === 'loading' ? 'SUBMITTING...' : 'SEND MESSAGE'}
               </button>
               {status !== 'idle' && (
-                <p style={{ fontSize: 13, color: status === 'error' ? '#E6A3A3' : '#E6C86E' }}>
+                <p style={{ fontSize: 13, color: status === 'error' ? '#E6A3A3' : '#D9BE72' }}>
                   {statusMessage || (status === 'success' ? 'Enquiry submitted successfully.' : 'Unable to submit enquiry.')}
                 </p>
               )}
@@ -1349,12 +1349,12 @@ function FormField({ label, value, onChange, placeholder, type = 'text', require
         className="w-full rounded-xl px-4 py-3 text-sm focus:outline-none transition-all duration-200"
         style={{
           background: 'rgba(22,22,22,0.78)',
-          border: '1px solid rgba(212,175,55,0.22)',
-          color: '#F5F5F5',
+          border: '1px solid rgba(200,165,75,0.22)',
+          color: '#F4F4F4',
           fontFamily: 'Inter',
         }}
-        onFocus={(e) => ((e.target as HTMLElement).style.borderColor = 'rgba(212,175,55,0.4)')}
-        onBlur={(e) => ((e.target as HTMLElement).style.borderColor = 'rgba(212,175,55,0.22)')}
+        onFocus={(e) => ((e.target as HTMLElement).style.borderColor = 'rgba(200,165,75,0.4)')}
+        onBlur={(e) => ((e.target as HTMLElement).style.borderColor = 'rgba(200,165,75,0.22)')}
       />
     </div>
   )
@@ -1373,11 +1373,11 @@ function Footer() {
   return (
     <footer
       className="py-16 relative overflow-hidden"
-      style={{ borderTop: '1px solid rgba(212,175,55,0.18)' }}
+      style={{ borderTop: '1px solid rgba(200,165,75,0.18)' }}
     >
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{ background: 'linear-gradient(180deg, transparent, rgba(212,175,55,0.02))' }}
+        style={{ background: 'linear-gradient(180deg, transparent, rgba(200,165,75,0.02))' }}
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12 mb-12">
@@ -1388,11 +1388,11 @@ function Footer() {
                 src={marksdLogo}
                 alt="MARKSD Group of Companies"
                 className="w-10 h-10 rounded-xl object-contain bg-black/20 p-0.5"
-                style={{ filter: 'drop-shadow(0 0 10px rgba(212,175,55,0.22))' }}
+                style={{ filter: 'drop-shadow(0 0 10px rgba(200,165,75,0.22))' }}
               />
               <div>
-                <p style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 18, letterSpacing: '0.1em', color: '#F5F5F5' }}>MARKSD</p>
-                <p style={{ fontSize: 9, letterSpacing: '0.25em', color: 'rgba(212,175,55,0.6)' }}>GROUP OF COMPANIES</p>
+                <p style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 18, letterSpacing: '0.1em', color: '#F4F4F4' }}>MARKSD</p>
+                <p style={{ fontSize: 9, letterSpacing: '0.25em', color: 'rgba(200,165,75,0.6)' }}>GROUP OF COMPANIES</p>
               </div>
             </div>
             <p style={{ fontSize: 14, lineHeight: 1.75, color: 'rgba(181,181,181,0.84)', maxWidth: 320, marginBottom: 20 }}>
@@ -1404,7 +1404,7 @@ function Footer() {
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-2.5 rounded-xl text-sm focus:outline-none min-w-0"
-                style={{ background: 'rgba(22,22,22,0.82)', border: '1px solid rgba(212,175,55,0.22)', color: '#F5F5F5', fontFamily: 'Inter' }}
+                style={{ background: 'rgba(22,22,22,0.82)', border: '1px solid rgba(200,165,75,0.22)', color: '#F4F4F4', fontFamily: 'Inter' }}
               />
               <button
                 className="px-4 py-2.5 rounded-xl text-xs font-bold tracking-wide glass-cta glass-cta-primary"
@@ -1424,7 +1424,7 @@ function Footer() {
                   href={resolveAnchor(l)}
                   className="block text-sm transition-colors duration-200"
                   style={{ color: 'rgba(181,181,181,0.84)' }}
-                  onMouseEnter={(e) => ((e.target as HTMLElement).style.color = '#D4AF37')}
+                  onMouseEnter={(e) => ((e.target as HTMLElement).style.color = '#C8A54B')}
                   onMouseLeave={(e) => ((e.target as HTMLElement).style.color = 'rgba(181,181,181,0.84)')}
                 >
                   {l}
@@ -1446,7 +1446,7 @@ function Footer() {
 
         <div
           className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4"
-          style={{ borderTop: '1px solid rgba(212,175,55,0.15)' }}
+          style={{ borderTop: '1px solid rgba(200,165,75,0.15)' }}
         >
           <p style={{ fontSize: 13, color: 'rgba(181,181,181,0.72)' }}>
             © {new Date().getFullYear()} MARKSD Group of Companies. All rights reserved.
@@ -1454,7 +1454,7 @@ function Footer() {
           <div className="flex gap-6">
             {['Privacy Policy', 'Terms of Service', 'Sitemap'].map((l) => (
               <a key={l} href="#" className="text-xs transition-colors duration-200" style={{ color: 'rgba(181,181,181,0.72)' }}
-                onMouseEnter={(e) => ((e.target as HTMLElement).style.color = '#D4AF37')}
+                onMouseEnter={(e) => ((e.target as HTMLElement).style.color = '#C8A54B')}
                 onMouseLeave={(e) => ((e.target as HTMLElement).style.color = 'rgba(181,181,181,0.72)' )}
               >
                 {l}
@@ -1472,8 +1472,8 @@ function Footer() {
 function SectionLabel({ text }: { text: string }) {
   return (
     <div className="flex items-center gap-3 mb-5">
-      <div className="w-5 h-px" style={{ background: '#D4AF37' }} />
-      <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.3em', color: 'rgba(212,175,55,0.7)', textTransform: 'uppercase' }}>
+      <div className="w-5 h-px" style={{ background: '#C8A54B' }} />
+      <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.3em', color: 'rgba(200,165,75,0.7)', textTransform: 'uppercase' }}>
         {text}
       </span>
     </div>
@@ -1481,7 +1481,7 @@ function SectionLabel({ text }: { text: string }) {
 }
 
 function IndustryIcon({ icon, active }: { icon: string; active: boolean }) {
-  const color = active ? '#E6C86E' : '#D4AF37'
+  const color = active ? '#D9BE72' : '#C8A54B'
   const common = { stroke: color, strokeWidth: 1.7, fill: 'none' as const, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const }
 
   const paths: Record<string, JSX.Element> = {
@@ -1539,7 +1539,7 @@ function IndustryIcon({ icon, active }: { icon: string; active: boolean }) {
   return (
     <span
       className="w-11 h-11 rounded-full flex items-center justify-center"
-      style={{ background: 'rgba(212,175,55,0.1)', border: '1px solid rgba(212,175,55,0.24)' }}
+      style={{ background: 'rgba(200,165,75,0.1)', border: '1px solid rgba(200,165,75,0.24)' }}
     >
       <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
         {paths[icon]}
@@ -1606,7 +1606,7 @@ function CompanyDetailPage() {
         <Navbar />
         <section className="min-h-screen flex items-center justify-center px-6 pt-28">
           <div className="text-center max-w-xl">
-            <h1 style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', color: '#F5F5F5', fontSize: 'clamp(30px,5vw,48px)', marginBottom: 12 }}>
+            <h1 style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', color: '#F4F4F4', fontSize: 'clamp(30px,5vw,48px)', marginBottom: 12 }}>
               Company Not Found
             </h1>
             <p style={{ color: 'rgba(181,181,181,0.9)', marginBottom: 24 }}>
@@ -1628,11 +1628,11 @@ function CompanyDetailPage() {
 
       <section className="pt-32 pb-20 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="rounded-3xl p-8 md:p-12" style={{ background: 'rgba(22,22,22,0.72)', border: '1px solid rgba(212,175,55,0.18)' }}>
+          <div className="rounded-3xl p-8 md:p-12" style={{ background: 'rgba(22,22,22,0.72)', border: '1px solid rgba(200,165,75,0.18)' }}>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
               <div>
                 <SectionLabel text="COMPANY PROFILE" />
-                <h1 style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, color: '#F5F5F5', fontSize: 'clamp(30px,5vw,56px)', lineHeight: 1.1, letterSpacing: '0.02em', marginBottom: 12 }}>
+                <h1 style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, color: '#F4F4F4', fontSize: 'clamp(30px,5vw,56px)', lineHeight: 1.1, letterSpacing: '0.02em', marginBottom: 12 }}>
                   {company.fullName}
                 </h1>
                 <p style={{ fontSize: 16, color: 'rgba(181,181,181,0.92)', lineHeight: 1.75, marginBottom: 28 }}>{company.intro}</p>
@@ -1640,7 +1640,7 @@ function CompanyDetailPage() {
                   Back to Home
                 </Link>
               </div>
-              <div className="rounded-2xl overflow-hidden" style={{ border: '1px solid rgba(212,175,55,0.2)' }}>
+              <div className="rounded-2xl overflow-hidden" style={{ border: '1px solid rgba(200,165,75,0.2)' }}>
                 <img src={company.image} alt={company.fullName} className="w-full h-72 md:h-80 object-cover" />
               </div>
             </div>
@@ -1651,29 +1651,29 @@ function CompanyDetailPage() {
       <section className="pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="p-6 md:p-8 rounded-2xl" style={{ background: 'rgba(22,22,22,0.72)', border: '1px solid rgba(212,175,55,0.18)' }}>
+            <div className="p-6 md:p-8 rounded-2xl" style={{ background: 'rgba(22,22,22,0.72)', border: '1px solid rgba(200,165,75,0.18)' }}>
               <SectionLabel text="ABOUT" />
               <p style={{ color: 'rgba(181,181,181,0.94)', lineHeight: 1.75, marginBottom: 18 }}>{company.overview}</p>
-              <h3 style={{ color: '#D4AF37', fontWeight: 700, fontSize: 14, letterSpacing: '0.05em', marginBottom: 10 }}>INDUSTRIES SERVED</h3>
+              <h3 style={{ color: '#C8A54B', fontWeight: 700, fontSize: 14, letterSpacing: '0.05em', marginBottom: 10 }}>INDUSTRIES SERVED</h3>
               <div className="flex flex-wrap gap-2 mb-5">
                 {company.industriesServed.map((industry) => (
-                  <span key={industry} className="px-3 py-1.5 rounded-full text-xs" style={{ background: 'rgba(212,175,55,0.1)', border: '1px solid rgba(212,175,55,0.2)', color: '#D4AF37' }}>
+                  <span key={industry} className="px-3 py-1.5 rounded-full text-xs" style={{ background: 'rgba(200,165,75,0.1)', border: '1px solid rgba(200,165,75,0.2)', color: '#C8A54B' }}>
                     {industry}
                   </span>
                 ))}
               </div>
-              <h3 style={{ color: '#D4AF37', fontWeight: 700, fontSize: 14, letterSpacing: '0.05em', marginBottom: 8 }}>MISSION</h3>
+              <h3 style={{ color: '#C8A54B', fontWeight: 700, fontSize: 14, letterSpacing: '0.05em', marginBottom: 8 }}>MISSION</h3>
               <p style={{ color: 'rgba(181,181,181,0.94)', lineHeight: 1.7, marginBottom: 16 }}>{company.mission}</p>
-              <h3 style={{ color: '#D4AF37', fontWeight: 700, fontSize: 14, letterSpacing: '0.05em', marginBottom: 8 }}>EXPERTISE</h3>
+              <h3 style={{ color: '#C8A54B', fontWeight: 700, fontSize: 14, letterSpacing: '0.05em', marginBottom: 8 }}>EXPERTISE</h3>
               <p style={{ color: 'rgba(181,181,181,0.94)', lineHeight: 1.7 }}>{company.expertise}</p>
             </div>
 
-            <div className="p-6 md:p-8 rounded-2xl" style={{ background: 'rgba(22,22,22,0.72)', border: '1px solid rgba(212,175,55,0.18)' }}>
+            <div className="p-6 md:p-8 rounded-2xl" style={{ background: 'rgba(22,22,22,0.72)', border: '1px solid rgba(200,165,75,0.18)' }}>
               <SectionLabel text="SERVICES" />
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {company.services.map((service) => (
-                  <div key={service.title} className="p-4 rounded-xl" style={{ background: 'rgba(15,15,15,0.72)', border: '1px solid rgba(212,175,55,0.14)' }}>
-                    <h4 style={{ color: '#F5F5F5', fontWeight: 700, fontSize: 15, marginBottom: 6 }}>{service.title}</h4>
+                  <div key={service.title} className="p-4 rounded-xl" style={{ background: 'rgba(15,15,15,0.72)', border: '1px solid rgba(200,165,75,0.14)' }}>
+                    <h4 style={{ color: '#F4F4F4', fontWeight: 700, fontSize: 15, marginBottom: 6 }}>{service.title}</h4>
                     <p style={{ color: 'rgba(181,181,181,0.9)', fontSize: 13, lineHeight: 1.65 }}>{service.description}</p>
                   </div>
                 ))}

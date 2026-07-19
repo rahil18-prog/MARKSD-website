@@ -2,32 +2,44 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-gold: #D4AF37;
-  --color-gold-accent: #C9A227;
+  /* Refined Corporate Color Palette */
+  --color-primary-gold: #C8A54B;
+  --color-secondary-gold: #B89232;
+  --color-highlight-gold: #D9BE72;
   --color-bg-dark: #050505;
   --color-bg-secondary: #0F0F0F;
-  --color-highlight-accent: #C9A227;
+  --color-bg-card: #151515;
+  --color-text-primary: #F4F4F4;
+  --color-text-secondary: #B5B5B5;
+  --color-text-muted: #8D8D8D;
   --font-sans: 'Inter', 'Manrope', sans-serif;
   --font-display: 'Playfair Display', 'Cormorant Garamond', serif;
   --font-serif-italic: 'Playfair Display', 'Cormorant Garamond', serif;
 }
 
 :root {
+  /* Refined Color System */
   --background: #050505;
-  --foreground: #F5F5F5;
-  --card: rgba(22,22,22,0.78);
-  --card-foreground: #F5F5F5;
-  --primary: #D4AF37;
+  --foreground: #F4F4F4;
+  --card: rgba(21, 21, 21, 0.82);
+  --card-foreground: #F4F4F4;
+  --primary: #C8A54B;
   --primary-foreground: #050505;
   --secondary: #0F0F0F;
-  --secondary-foreground: #F5F5F5;
-  --muted: rgba(181,181,181,0.16);
-  --muted-foreground: #B5B5B5;
-  --accent: #E6C86E;
+  --secondary-foreground: #F4F4F4;
+  --muted: rgba(141, 141, 141, 0.16);
+  --muted-foreground: #8D8D8D;
+  --accent: #D9BE72;
   --accent-foreground: #050505;
-  --border: rgba(212,175,55,0.2);
-  --ring: #D4AF37;
+  --border: rgba(200, 165, 75, 0.25);
+  --border-hover: rgba(200, 165, 75, 0.45);
+  --ring: #C8A54B;
   --radius: 0.75rem;
+  
+  /* Soft ambient shadows */
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.25);
+  --shadow-elevated: 0 12px 32px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 0 20px rgba(200, 165, 75, 0.08);
 }
 
 * {
@@ -45,15 +57,10 @@ html::-webkit-scrollbar {
 
 body {
   background: #050505;
-  color: #F5F5F5;
+  color: #F4F4F4;
   font-family: 'Inter', 'Manrope', sans-serif;
   overflow-x: hidden;
   line-height: 1.7;
-}
-
-.font-serif-italic {
-  font-family: 'Playfair Display', 'Cormorant Garamond', serif;
-  font-style: italic;
 }
 
 h1, h2, h3, h4 {
@@ -61,67 +68,72 @@ h1, h2, h3, h4 {
   letter-spacing: 0.02em;
 }
 
+/* Glass effects with refined colors */
 .glass {
-  background: rgba(15,15,15,0.7);
+  background: rgba(15, 15, 15, 0.72);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(212,175,55,0.22);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  border: 1px solid rgba(200, 165, 75, 0.25);
+  box-shadow: var(--shadow-soft);
 }
 
 .glass-card {
-  background: rgba(22,22,22,0.78);
+  background: rgba(21, 21, 21, 0.82);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(212,175,55,0.18);
-  box-shadow: 0 16px 36px rgba(0,0,0,0.34);
+  border: 1px solid rgba(200, 165, 75, 0.25);
+  box-shadow: var(--shadow-elevated), var(--shadow-glow);
 }
 
+/* Executive button styles */
 .glass-cta {
-  background: rgba(15,15,15,0.74);
+  background: rgba(15, 15, 15, 0.76);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(212,175,55,0.38);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.32);
-  color: #E6C86E;
-  transition: background 300ms ease, border-color 300ms ease, box-shadow 300ms ease, transform 300ms ease, color 300ms ease;
+  border: 1px solid rgba(200, 165, 75, 0.25);
+  box-shadow: var(--shadow-soft);
+  color: #C8A54B;
+  transition: all 280ms ease;
 }
 
 .glass-cta:hover {
-  background: rgba(22,22,22,0.9);
-  border-color: rgba(230,200,110,0.8);
-  box-shadow: 0 14px 34px rgba(0,0,0,0.36), 0 0 22px rgba(212,175,55,0.24);
-  color: #F5F5F5;
+  background: rgba(21, 21, 21, 0.88);
+  border-color: rgba(200, 165, 75, 0.45);
+  box-shadow: var(--shadow-elevated), var(--shadow-glow);
+  color: #D9BE72;
   transform: translateY(-1px);
 }
 
 .glass-cta:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 2px rgba(212,175,55,0.45), 0 12px 32px rgba(0,0,0,0.24);
+  box-shadow: 0 0 0 2px rgba(200, 165, 75, 0.35), var(--shadow-elevated);
 }
 
 .glass-cta-primary {
-  background: rgba(15,15,15,0.78);
-  border-color: rgba(212,175,55,0.52);
-  color: #E6C86E;
+  background: rgba(15, 15, 15, 0.8);
+  border-color: rgba(200, 165, 75, 0.35);
+  color: #C8A54B;
 }
 
 .glass-cta-primary:hover {
-  background: rgba(212,175,55,0.92);
-  border-color: rgba(212,175,55,0.95);
-  color: #050505;
+  background: rgba(200, 165, 75, 0.12);
+  border-color: rgba(200, 165, 75, 0.55);
+  color: #D9BE72;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-elevated), var(--shadow-glow);
 }
 
+/* Subtle gradients */
 .gold-gradient {
-  background: linear-gradient(135deg, #D4AF37, #E6C86E, #C9A227);
+  background: linear-gradient(135deg, #C8A54B, #D9BE72, #B89232);
 }
 
 .text-gold {
-  color: #D4AF37;
+  color: #C8A54B;
 }
 
 .border-gold {
-  border-color: rgba(212,175,55,0.32);
+  border-color: rgba(200, 165, 75, 0.25);
 }
 
 @keyframes fadeUp {
@@ -187,9 +199,16 @@ h1, h2, h3, h4 {
   transition: opacity 0.8s ease, visibility 0.8s ease;
 }
 
+.loading-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .nav-link {
   position: relative;
   display: inline-block;
+  color: #B5B5B5;
 }
 
 .nav-link::after {
@@ -199,7 +218,7 @@ h1, h2, h3, h4 {
   bottom: -6px;
   width: 100%;
   height: 1px;
-  background: #D4AF37;
+  background: #C8A54B;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 280ms ease;
@@ -207,11 +226,6 @@ h1, h2, h3, h4 {
 
 .nav-link:hover::after {
   transform: scaleX(1);
-}
-
-.loading-overlay.hidden {
-  opacity: 0;
-  visibility: hidden;
 }
 
 .section-reveal {
@@ -224,3 +238,16 @@ h1, h2, h3, h4 {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Utility classes for refined colors */
+.text-primary { color: #F4F4F4; }
+.text-secondary { color: #B5B5B5; }
+.text-muted { color: #8D8D8D; }
+.text-gold-primary { color: #C8A54B; }
+.text-gold-accent { color: #D9BE72; }
+
+.bg-card { background: rgba(21, 21, 21, 0.82); }
+.bg-secondary { background: #0F0F0F; }
+
+.border-primary { border-color: rgba(200, 165, 75, 0.25); }
+.border-hover:hover { border-color: rgba(200, 165, 75, 0.45); }
