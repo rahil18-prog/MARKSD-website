@@ -7,6 +7,7 @@ import mongoSanitize from 'express-mongo-sanitize'
 import morgan from 'morgan'
 import connectDB from './config/db.js'
 import contactRoutes from './routes/contactRoutes.js'
+import newsletterRoutes from './routes/newsletterRoutes.js'
 import { notFound, errorHandler } from './middleware/errorHandler.js'
 
 dotenv.config()
@@ -37,6 +38,7 @@ app.get('/api/health', (_req, res) => {
 })
 
 app.use('/api/contact', contactRoutes)
+app.use('/api/newsletter', newsletterRoutes)
 
 app.use(notFound)
 app.use(errorHandler)

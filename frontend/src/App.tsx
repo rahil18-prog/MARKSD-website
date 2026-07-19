@@ -73,12 +73,12 @@ const COMPANIES: Company[] = [
   },
   {
     id: 'pureterra',
-    slug: 'marksd-pureterra',
-    name: 'MARKSD PureTerra',
-    fullName: 'MARKSD PureTerra',
+    slug: 'ma-pureterra',
+    name: 'MA PureTerra',
+    fullName: 'MA PureTerra',
     category: 'Food Processing & Exports',
     intro: 'Premium food processing and spice trade operations.',
-    overview: 'MARKSD PureTerra processes and supplies high-quality spices and value-added agricultural products with a strong focus on quality systems and supply reliability.',
+    overview: 'MA PureTerra processes and supplies high-quality spices and value-added agricultural products with a strong focus on quality systems and supply reliability.',
     industriesServed: ['Food Processing', 'Retail Supply', 'Export Trade', 'Hospitality'],
     mission: 'To deliver trusted quality in food ingredients through disciplined sourcing and processing.',
     expertise: 'Spice processing, quality grading, export readiness, and supply chain coordination.',
@@ -95,12 +95,12 @@ const COMPANIES: Company[] = [
   },
   {
     id: 'interiors',
-    slug: 'marksd-interiors-constructions',
-    name: 'MARKSD Interiors',
-    fullName: 'MARKSD Interiors & Constructions',
+    slug: 'hyrus-interiors-constructions',
+    name: 'HYRUS Interiors',
+    fullName: 'HYRUS Interiors & Constructions',
     category: 'Architecture & Design',
     intro: 'End-to-end architecture and construction delivery.',
-    overview: 'MARKSD Interiors & Constructions provides integrated design, architectural planning, and execution for premium residential and commercial projects.',
+    overview: 'HYRUS Interiors & Constructions provides integrated design, architectural planning, and execution for premium residential and commercial projects.',
     industriesServed: ['Residential', 'Commercial', 'Hospitality', 'Corporate Offices'],
     mission: 'To execute thoughtfully designed spaces with high quality and long-term value.',
     expertise: 'Architectural planning, interior execution, project coordination, and material sourcing.',
@@ -138,26 +138,28 @@ const COMPANIES: Company[] = [
     tags: ['Import Export', 'Logistics', 'Strategic Sourcing'],
   },
   {
-    id: 'automotive',
-    slug: 'marksd-automotive',
-    name: 'MARKSD Automotive',
-    fullName: 'MARKSD Automotive',
-    category: 'Automotive Restoration',
-    intro: 'Premium restoration and detailing for discerning vehicle owners.',
-    overview: 'MARKSD Automotive delivers restoration and detailing programs designed to preserve, enhance, and protect premium vehicles.',
-    industriesServed: ['Private Owners', 'Collectors', 'Luxury Segment', 'Automotive Enthusiasts'],
-    mission: 'To deliver restoration craftsmanship and finish quality that reflect engineering excellence.',
-    expertise: 'Paint correction, coating systems, restoration detailing, and bespoke vehicle enhancement.',
+    id: 'scrap',
+    slug: 'hyrus-scrap-trading',
+    name: 'HYRUS Scrap Trading',
+    fullName: 'HYRUS Scrap Trading',
+    category: 'Scrap Trading & Recycling',
+    intro: 'Comprehensive scrap trading and metal recycling solutions for industrial clients.',
+    overview: 'HYRUS Scrap Trading provides end-to-end scrap metal trading, processing, and recycling services. We connect industrial suppliers with manufacturers through efficient scrap collection, sorting, and supply chain management.',
+    industriesServed: ['Steel Manufacturing', 'Foundries', 'Automotive', 'Construction', 'Industrial Recycling'],
+    mission: 'To deliver sustainable scrap trading solutions that support circular economy and industrial efficiency.',
+    expertise: 'Metal scrap trading, industrial sorting, quality inspection, bulk supply, and sustainable recycling operations.',
     services: [
-      { title: 'Vehicle Restoration', description: 'Structured restoration workflows for premium and legacy vehicles.' },
-      { title: 'Ceramic Coating', description: 'Surface protection solutions for long-lasting finish integrity.' },
-      { title: 'Detailing & Paint Correction', description: 'Precision cosmetic refinement and professional finishing.' },
-      { title: 'Custom Enhancement Projects', description: 'Tailored visual and functional upgrades based on owner requirements.' },
+      { title: 'Ferrous Scrap Trading', description: 'Supply of mild steel, carbon steel, and other ferrous scrap for manufacturing.' },
+      { title: 'Non-Ferrous Scrap Trading', description: 'Copper, aluminum, brass, and specialty metal scrap for industrial use.' },
+      { title: 'Industrial Scrap Collection', description: 'On-site collection and pickup services for manufacturing facilities.' },
+      { title: 'Scrap Processing & Sorting', description: 'Professional metal sorting, grading, and preparation for recycling.' },
+      { title: 'Bulk Scrap Supply', description: 'Volume supply programs for steel mills, foundries, and processing plants.' },
+      { title: 'Recycling Solutions', description: 'Sustainable scrap management and circular economy support.' },
     ],
     description:
-      'Vehicle restoration, car detailing, ceramic coating, paint correction, luxury restoration, and custom automotive builds for discerning clients.',
-    image: 'https://images.unsplash.com/photo-1759673735031-b6eabfc82261?w=800&h=600&fit=crop&auto=format',
-    tags: ['Restoration', 'Ceramic Coating', 'Luxury Cars'],
+      'Ferrous and non-ferrous scrap trading, industrial scrap collection, metal sorting, processing, bulk supply, and sustainable recycling solutions for manufacturers and foundries.',
+    image: 'https://images.unsplash.com/photo-1565193566672-2a1418d000a0?w=800&h=600&fit=crop&auto=format',
+    tags: ['Scrap Trading', 'Metal Recycling', 'Industrial Supply'],
   },
 ]
 
@@ -168,7 +170,7 @@ const INDUSTRIES = [
   { label: 'Architecture', icon: 'architecture' },
   { label: 'Construction', icon: 'construction' },
   { label: 'Exports', icon: 'exports' },
-  { label: 'Automotive', icon: 'automotive' },
+  { label: 'Scrap Trading', icon: 'technology' },
   { label: 'Technology', icon: 'technology' },
 ]
 
@@ -176,10 +178,10 @@ const TIMELINE = [
   { stage: 'Foundation', label: 'Vision', desc: 'MARKSD Group was established with a clear vision to build diversified business excellence.' },
   { stage: 'Acceleration', label: 'Digital Growth', desc: 'Digital Meister Technologies launched to support strategic digital transformation.' },
   { stage: 'Scale', label: 'Manufacturing', desc: 'MM Barrels Industry expanded production capacity across Andhra Pradesh.' },
-  { stage: 'Diversification', label: 'Food Processing', desc: 'MARKSD PureTerra entered premium spice and essential oil export operations.' },
-  { stage: 'Expansion', label: 'Architecture', desc: 'MARKSD Interiors & Constructions launched a premium project portfolio.' },
+  { stage: 'Diversification', label: 'Food Processing', desc: 'MA PureTerra entered premium spice and essential oil export operations.' },
+  { stage: 'Expansion', label: 'Architecture', desc: 'HYRUS Interiors & Constructions launched a premium project portfolio.' },
   { stage: 'Trade', label: 'Operations', desc: 'MARKSD Global Trade strengthened strategic sourcing and trade operations.' },
-  { stage: 'Innovation', label: 'Automotive', desc: 'MARKSD Automotive expanded restoration and detailing capabilities.' },
+  { stage: 'Innovation', label: 'Scrap Trading', desc: 'HYRUS Scrap Trading expanded recycling and industrial supply capabilities.' },
   { stage: 'Next Phase', label: 'Future Ventures', desc: 'Expanding into new sectors across India while preparing for international growth.' },
 ]
 
@@ -569,8 +571,8 @@ function Hero() {
             animationDelay: '0.5s',
           }}
         >
-          MARKSD Group of Companies is a diversified organization delivering innovative solutions in digital marketing,
-          manufacturing, food processing, construction, trade operations, and automobile restoration.
+          HYRUS Group of Companies is a diversified organization delivering innovative solutions in digital marketing,
+          manufacturing, food processing, construction, trade operations, and scrap trading.
           <br />
           <br />
           Driven by quality, innovation, and sustainability, we create businesses that solve real-world challenges and
@@ -729,7 +731,7 @@ function CompaniesSection() {
           A Portfolio of Excellence
         </h2>
         <p style={{ color: 'rgba(181,181,181,0.9)', fontSize: 16, maxWidth: 540, lineHeight: 1.7, marginBottom: 48 }}>
-          Six distinct businesses, one unified vision. Each company operates with independence and expertise within MARKSD's enterprise ecosystem.
+          Six distinct businesses, one unified vision. Each company operates with independence and expertise within HYRUS's enterprise ecosystem.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -766,15 +768,15 @@ function CompaniesSection() {
               <span style={{ fontSize: 28, color: '#C8A54B' }}>+</span>
             </div>
 
-            <h3 style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 700, fontSize: 18, color: '#F4F4F4', marginBottom: 8 }}>
-              MORE COMPANIES
-            </h3>
-            <p style={{ fontSize: 13, letterSpacing: '0.15em', color: '#C8A54B', marginBottom: 16, fontWeight: 600 }}>
-              COMING SOON
-            </p>
-            <p style={{ fontSize: 14, color: 'rgba(181,181,181,0.8)', lineHeight: 1.65 }}>
-              MARKSD Group continues to expand into new sectors across India while preparing for future international growth.
-            </p>
+<h3 style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 700, fontSize: 18, color: '#F4F4F4', marginBottom: 8 }}>
+               MORE COMPANIES
+             </h3>
+             <p style={{ fontSize: 13, letterSpacing: '0.15em', color: '#C8A54B', marginBottom: 16, fontWeight: 600 }}>
+               COMING SOON
+             </p>
+             <p style={{ fontSize: 14, color: 'rgba(181,181,181,0.8)', lineHeight: 1.65 }}>
+               HYRUS Group continues to expand into new sectors across India while preparing for future international growth.
+             </p>
 
             {/* Background glow */}
             <div
@@ -803,7 +805,7 @@ function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
           {/* Left */}
           <div>
-            <SectionLabel text="ABOUT MARKSD" />
+            <SectionLabel text="ABOUT HYRUS" />
             <h2 style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 'clamp(32px,4vw,52px)', color: '#F4F4F4', lineHeight: 1.1, letterSpacing: '0.02em', marginBottom: 24 }}>
               A Decade of{' '}
               <span className="font-serif-italic" style={{ color: '#C8A54B' }}>
@@ -812,12 +814,12 @@ function AboutSection() {
               Excellence
             </h2>
             <p style={{ fontSize: 16, lineHeight: 1.8, color: 'rgba(181,181,181,0.94)', marginBottom: 16 }}>
-              MARKSD Group of Companies was established with a singular purpose: to build businesses that create lasting
+              HYRUS Group of Companies was established with a singular purpose: to build businesses that create lasting
               value. What began as a single enterprise has grown into a diversified conglomerate spanning seven
               distinct industries.
             </p>
             <p style={{ fontSize: 16, lineHeight: 1.8, color: 'rgba(181,181,181,0.94)', marginBottom: 40 }}>
-              Each company within the MARKSD portfolio operates with independence, expertise, and a shared commitment to
+              Each company within the HYRUS portfolio operates with independence, expertise, and a shared commitment to
               quality, innovation, and sustainable growth.
             </p>
 
@@ -1121,7 +1123,7 @@ function GlobalPresence() {
                 <span className="font-serif-italic" style={{ color: '#C8A54B' }}>India</span>
               </h2>
               <p style={{ fontSize: 15, lineHeight: 1.8, color: 'rgba(181,181,181,0.94)', marginBottom: 32 }}>
-                Headquartered in India, MARKSD Group operates throughout the country with integrated trade and export
+                Headquartered in India, HYRUS Group operates throughout the country with integrated trade and export
                 capabilities. We are expanding nationally while building toward international expansion.
               </p>
               <div className="flex flex-wrap gap-4">
@@ -1206,7 +1208,7 @@ function ContactSection() {
     setStatusMessage('')
     try {
       const { default: axios } = await import('axios')
-      const apiBase = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000'
+      const apiBase = import.meta.env.VITE_API_BASE_URL || 'https://marksd-backend.onrender.com'
       const response = await axios.post(`${apiBase}/api/contact`, form, { timeout: 15000 })
       setStatus('success')
       setStatusMessage(response.data?.message || 'Enquiry submitted successfully.')
@@ -1227,7 +1229,7 @@ function ContactSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <SectionLabel text="CONTACT" />
         <h2 style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 'clamp(32px,5vw,56px)', color: '#F4F4F4', lineHeight: 1.1, letterSpacing: '0.02em', marginBottom: 12 }}>
-          Partner With MARKSD
+          Partner With HYRUS
         </h2>
         <p style={{ color: 'rgba(181,181,181,0.9)', fontSize: 16, maxWidth: 480, lineHeight: 1.7, marginBottom: 56 }}>
           Connect with our team to discuss partnerships, investments, and strategic business requirements.
@@ -1365,9 +1367,32 @@ function FormField({ label, value, onChange, placeholder, type = 'text', require
 function Footer() {
   const location = useLocation()
   const isHome = location.pathname === '/'
+  const [newsletterEmail, setNewsletterEmail] = useState('')
+  const [newsletterStatus, setNewsletterStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  const [newsletterMessage, setNewsletterMessage] = useState('')
+
   const resolveAnchor = (label: string) => {
     const hash = `#${label.toLowerCase()}`
     return isHome ? hash : `/${hash}`
+  }
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (newsletterStatus === 'loading' || !newsletterEmail) return
+    setNewsletterStatus('loading')
+    setNewsletterMessage('')
+    try {
+      const { default: axios } = await import('axios')
+      const apiBase = import.meta.env.VITE_API_BASE_URL || 'https://marksd-backend.onrender.com'
+      const response = await axios.post(`${apiBase}/api/newsletter/subscribe`, { email: newsletterEmail }, { timeout: 10000 })
+      setNewsletterStatus('success')
+      setNewsletterMessage(response.data?.message || 'Successfully subscribed!')
+      setNewsletterEmail('')
+    } catch (error: any) {
+      const message = error?.response?.data?.message || 'Unable to subscribe. Please try again.'
+      setNewsletterStatus('error')
+      setNewsletterMessage(message)
+    }
   }
 
   return (
@@ -1392,7 +1417,7 @@ function Footer() {
               />
               <div>
                 <p style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 18, letterSpacing: '0.1em', color: '#F4F4F4' }}>MARKSD</p>
-                <p style={{ fontSize: 9, letterSpacing: '0.25em', color: 'rgba(200,165,75,0.6)' }}>GROUP OF COMPANIES</p>
+                <p style={{ fontSize: 11, letterSpacing: '0.25em', color: 'rgba(200,165,75,0.6)' }}>GROUP OF COMPANIES</p>
               </div>
             </div>
             <p style={{ fontSize: 14, lineHeight: 1.75, color: 'rgba(181,181,181,0.84)', maxWidth: 320, marginBottom: 20 }}>
@@ -1402,16 +1427,25 @@ function Footer() {
             <div className="flex flex-col sm:flex-row gap-2">
               <input
                 type="email"
+                value={newsletterEmail}
+                onChange={(e) => setNewsletterEmail(e.target.value)}
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-2.5 rounded-xl text-sm focus:outline-none min-w-0"
                 style={{ background: 'rgba(22,22,22,0.82)', border: '1px solid rgba(200,165,75,0.22)', color: '#F4F4F4', fontFamily: 'Inter' }}
               />
               <button
-                className="px-4 py-2.5 rounded-xl text-xs font-bold tracking-wide glass-cta glass-cta-primary"
+                onClick={handleNewsletterSubmit}
+                disabled={newsletterStatus === 'loading'}
+                className="px-4 py-2.5 rounded-xl text-xs font-bold tracking-wide glass-cta glass-cta-primary disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                Subscribe
+                {newsletterStatus === 'loading' ? 'SUBSCRIBING...' : 'Subscribe'}
               </button>
             </div>
+            {newsletterStatus !== 'idle' && (
+              <p style={{ fontSize: 12, color: newsletterStatus === 'error' ? '#E6A3A3' : '#D9BE72', marginTop: 8 }}>
+                {newsletterMessage || (newsletterStatus === 'success' ? 'Successfully subscribed!' : 'Unable to subscribe.')}
+              </p>
+            )}
           </div>
 
           {/* Quick links */}
@@ -1448,9 +1482,9 @@ function Footer() {
           className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4"
           style={{ borderTop: '1px solid rgba(200,165,75,0.15)' }}
         >
-          <p style={{ fontSize: 13, color: 'rgba(181,181,181,0.72)' }}>
-            © {new Date().getFullYear()} MARKSD Group of Companies. All rights reserved.
-          </p>
+<p style={{ fontSize: 13, color: 'rgba(181,181,181,0.72)' }}>
+             © {new Date().getFullYear()} HYRUS Group of Companies. All rights reserved.
+           </p>
           <div className="flex gap-6">
             {['Privacy Policy', 'Terms of Service', 'Sitemap'].map((l) => (
               <a key={l} href="#" className="text-xs transition-colors duration-200" style={{ color: 'rgba(181,181,181,0.72)' }}
