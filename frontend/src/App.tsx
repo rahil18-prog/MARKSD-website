@@ -21,6 +21,7 @@ interface Company {
   image: string
   location?: string
   tags: string[]
+  gallery?: string[]
 }
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
@@ -158,7 +159,13 @@ const COMPANIES: Company[] = [
     ],
     description:
       'Ferrous and non-ferrous scrap trading, industrial scrap collection, metal sorting, processing, bulk supply, and sustainable recycling solutions for manufacturers and foundries.',
-    image: 'https://images.unsplash.com/photo-1565193566672-2a1418d000a0?w=800&h=600&fit=crop&auto=format',
+    image: 'https://images.unsplash.com/photo-1621905251189-08b95d50479f?w=1200&h=800&fit=crop&auto=format&dpr=2',
+    gallery: [
+      'https://images.unsplash.com/photo-1590247813693-5541d1c609fd?w=800&h=600&fit=crop&auto=format',
+      'https://images.unsplash.com/photo-1618588507383-aa0f109cc2f4?w=800&h=600&fit=crop&auto=format',
+      'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop&auto=format',
+      'https://images.unsplash.com/photo-1565193566672-2a1418d000a0?w=800&h=600&fit=crop&auto=format',
+    ],
     tags: ['Scrap Trading', 'Metal Recycling', 'Industrial Supply'],
   },
 ]
@@ -653,8 +660,9 @@ function CompanyCard({ company }: { company: Company }) {
       <div className="relative h-52 overflow-hidden bg-neutral-900">
         <img
           src={company.image}
-          alt={company.fullName}
+          alt={`${company.fullName} - ${company.category}`}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          loading="lazy"
         />
         <div
           className="absolute inset-0"
@@ -1651,10 +1659,48 @@ function CompanyDetailPage() {
             </Link>
           </div>
         </section>
-        <Footer />
+<Footer />
+    </div>
+  )
+}
+
+function CompanyGallery({ images, company }: { images: string[]; company: Company }) {
+  return (
+    <section className="pb-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <SectionLabel text="FACILITY HIGHLIGHTS" />
+        <h2 style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, color: '#F4F4F4', fontSize: 'clamp(24px,4vw,40px)', lineHeight: 1.1, letterSpacing: '0.02em', marginBottom: 24 }}>
+          {company.name} Operations
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {images.map((img, i) => (
+            <div
+              key={i}
+              className="relative rounded-2xl overflow-hidden group"
+              style={{ aspectRatio: '4/3' }}
+            >
+              <img
+                src={img}
+                alt={`${company.name} - ${['Scrap Sorting Facility', 'Metal Processing Equipment', 'Industrial Recycling Operations', 'Warehouse and Logistics'][i] || `View ${i + 1}`}`}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                loading="lazy"
+              />
+              <div
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                style={{ background: 'linear-gradient(180deg, transparent 40%, rgba(5,5,5,0.85) 100%)' }}
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p style={{ fontSize: 13, color: 'rgba(200,165,75,0.9)', fontWeight: 600, letterSpacing: '0.05em' }}>
+                  {['Scrap Sorting Facility', 'Metal Processing Equipment', 'Industrial Recycling Operations', 'Warehouse and Logistics'][i] || `View ${i + 1}`}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    )
-  }
+    </section>
+  )
+}
 
   return (
     <div style={{ background: '#050505', minHeight: '100vh' }}>
@@ -1675,7 +1721,12 @@ function CompanyDetailPage() {
                 </Link>
               </div>
               <div className="rounded-2xl overflow-hidden" style={{ border: '1px solid rgba(200,165,75,0.2)' }}>
-                <img src={company.image} alt={company.fullName} className="w-full h-72 md:h-80 object-cover" />
+                <img 
+                  src={company.image} 
+                  alt={`${company.fullName} - ${company.category} operations and facilities`} 
+                  className="w-full h-72 md:h-80 object-cover"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
@@ -1716,6 +1767,10 @@ function CompanyDetailPage() {
           </div>
         </div>
       </section>
+
+      {company.gallery && company.gallery.length > 0 && (
+        <CompanyGallery images={company.gallery} company={company} />
+      )}
 
       <Footer />
     </div>
