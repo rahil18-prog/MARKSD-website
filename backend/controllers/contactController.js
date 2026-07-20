@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 import Contact from '../models/Contact.js'
-import { sendContactNotification } from '../utils/mailer.js'
+import { sendContactNotification, sendAutoResponse } from '../utils/mailer.js'
 
 export const submitContact = async (req, res, next) => {
   try {
@@ -18,7 +18,9 @@ export const submitContact = async (req, res, next) => {
     }
 
     const contact = await Contact.create(payload)
+    
     await sendContactNotification(contact)
+    await sendAutoResponse(contact)
 
     return res.status(201).json({
       success: true,

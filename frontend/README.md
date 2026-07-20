@@ -124,7 +124,7 @@ EMAIL_HOST=smtp.gmail.com
 EMAIL_PORT=465
 EMAIL_USER=your-email@gmail.com
 EMAIL_PASS=your-app-password
-CONTACT_RECEIVER=info@marksdgroup.com
+CONTACT_RECEIVER=info@marksd.co
 ```
 
 ## Features

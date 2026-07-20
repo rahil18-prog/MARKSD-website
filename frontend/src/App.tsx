@@ -185,14 +185,13 @@ const INDUSTRIES = [
 ]
 
 const TIMELINE = [
-  { stage: 'Foundation', label: 'Vision', desc: 'MARKSD Group was established with a clear vision to build diversified business excellence.' },
-  { stage: 'Acceleration', label: 'Digital Growth', desc: 'Digital Meister Technologies launched to support strategic digital transformation.' },
-  { stage: 'Scale', label: 'Manufacturing', desc: 'MM Barrels Industry expanded production capacity across Andhra Pradesh.' },
-  { stage: 'Diversification', label: 'Food Processing', desc: 'MA PureTerra entered premium spice and essential oil export operations.' },
-  { stage: 'Expansion', label: 'Architecture', desc: 'HYRUS Interiors & Constructions launched a premium project portfolio.' },
-  { stage: 'Trade', label: 'Operations', desc: 'MARKSD Global Trade strengthened strategic sourcing and trade operations.' },
-  { stage: 'Innovation', label: 'Scrap Trading', desc: 'HYRUS Scrap Trading expanded recycling and industrial supply capabilities.' },
-  { stage: 'Next Phase', label: 'Future Ventures', desc: 'Expanding into new sectors across India while preparing for international growth.' },
+  { stage: 'Foundation', label: 'MARKSD Group', desc: 'MARKSD Group of Companies established with a vision to build diversified business excellence.' },
+  { stage: 'Expansion', label: 'HYRUS Interiors', desc: 'HYRUS Interiors & Construction launched to deliver premium architecture and construction projects.' },
+  { stage: 'Digital Growth', label: 'Digital Meister', desc: 'Digital Meister Technologies established to drive strategic digital transformation.' },
+  { stage: 'Manufacturing', label: 'MM Barrels', desc: 'MM Barrels Industry commenced operations in industrial packaging manufacturing.' },
+  { stage: 'Food Processing', label: 'MA PureTerra', desc: 'MA PureTerra entered premium spice processing and export operations.' },
+  { stage: 'Trade', label: 'HYRUS Scrap Trading', desc: 'HYRUS Scrap Trading & Supply launched for industrial scrap and recycling solutions.' },
+  { stage: 'Future', label: 'Expansion', desc: 'Expanding into new sectors across India with plans for Chennai, Bengaluru, Hyderabad, Mumbai, and Delhi.' },
 ]
 
 const STATS = [
@@ -581,12 +580,10 @@ function Hero() {
             animationDelay: '0.5s',
           }}
         >
-          HYRUS Group of Companies is a diversified organization delivering innovative solutions in digital marketing,
-          manufacturing, food processing, construction, trade operations, and scrap trading.
+          MARKSD Group of Companies is a diversified enterprise operating across multiple industries including construction, digital transformation, food processing, trade, manufacturing and industrial solutions.
           <br />
           <br />
-          Driven by quality, innovation, and sustainability, we create businesses that solve real-world challenges and
-          build lasting value.
+          Each subsidiary operates independently while sharing MARKSD's commitment to quality, innovation and sustainable growth.
         </p>
 
         {/* Buttons */}
@@ -742,7 +739,7 @@ function CompaniesSection() {
           A Portfolio of Excellence
         </h2>
         <p style={{ color: 'rgba(181,181,181,0.9)', fontSize: 16, maxWidth: 540, lineHeight: 1.7, marginBottom: 48 }}>
-          Six distinct businesses, one unified vision. Each company operates with independence and expertise within HYRUS's enterprise ecosystem.
+          Six specialized companies operating under the MARKSD Group of Companies.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -785,9 +782,9 @@ function CompaniesSection() {
              <p style={{ fontSize: 13, letterSpacing: '0.15em', color: '#C8A54B', marginBottom: 16, fontWeight: 600 }}>
                COMING SOON
              </p>
-             <p style={{ fontSize: 14, color: 'rgba(181,181,181,0.8)', lineHeight: 1.65 }}>
-               HYRUS Group continues to expand into new sectors across India while preparing for future international growth.
-             </p>
+<p style={{ fontSize: 14, color: 'rgba(181,181,181,0.8)', lineHeight: 1.65 }}>
+                MARKSD Group continues to expand into new sectors across India while preparing for future international growth.
+              </p>
 
             {/* Background glow */}
             <div
@@ -816,7 +813,7 @@ function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
           {/* Left */}
           <div>
-            <SectionLabel text="ABOUT HYRUS" />
+            <SectionLabel text="ABOUT MARKSD" />
             <h2 style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 'clamp(32px,4vw,52px)', color: '#F4F4F4', lineHeight: 1.1, letterSpacing: '0.02em', marginBottom: 24 }}>
               A Decade of{' '}
               <span className="font-serif-italic" style={{ color: '#C8A54B' }}>
@@ -825,12 +822,12 @@ function AboutSection() {
               Excellence
             </h2>
             <p style={{ fontSize: 16, lineHeight: 1.8, color: 'rgba(181,181,181,0.94)', marginBottom: 16 }}>
-              HYRUS Group of Companies was established with a singular purpose: to build businesses that create lasting
+              MARKSD Group of Companies was established with a singular purpose: to build businesses that create lasting
               value. What began as a single enterprise has grown into a diversified conglomerate spanning seven
               distinct industries.
             </p>
             <p style={{ fontSize: 16, lineHeight: 1.8, color: 'rgba(181,181,181,0.94)', marginBottom: 40 }}>
-              Each company within the HYRUS portfolio operates with independence, expertise, and a shared commitment to
+              Each company within the MARKSD portfolio operates with independence, expertise, and a shared commitment to
               quality, innovation, and sustainable growth.
             </p>
 
@@ -1113,6 +1110,17 @@ function TestimonialsSection() {
 // ─── Global Presence ───────────────────────────────────────────────────────────
 
 function GlobalPresence() {
+  const cities = [
+    { name: 'Chittoor', state: 'Andhra Pradesh', type: 'HQ', x: 52, y: 72 },
+    { name: 'Chennai', state: 'Tamil Nadu', type: 'Future', x: 56, y: 82 },
+    { name: 'Bengaluru', state: 'Karnataka', type: 'Future', x: 48, y: 78 },
+    { name: 'Hyderabad', state: 'Telangana', type: 'Future', x: 46, y: 68 },
+    { name: 'Mumbai', state: 'Maharashtra', type: 'Future', x: 38, y: 52 },
+    { name: 'Delhi', state: 'Delhi', type: 'Future', x: 42, y: 28 },
+  ]
+
+  const [hoveredCity, setHoveredCity] = useState<string | null>(null)
+
   return (
     <section className="py-28 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
@@ -1120,7 +1128,6 @@ function GlobalPresence() {
           className="rounded-3xl p-12 md:p-16 relative overflow-hidden"
           style={{ background: 'rgba(22,22,22,0.72)', border: '1px solid rgba(200,165,75,0.18)' }}
         >
-          {/* BG glow */}
           <div
             className="absolute pointer-events-none"
             style={{ top: '50%', left: '60%', transform: 'translate(-50%,-50%)', width: 500, height: 300, background: 'radial-gradient(ellipse, rgba(200,165,75,0.06), transparent 70%)', filter: 'blur(20px)' }}
@@ -1134,68 +1141,102 @@ function GlobalPresence() {
                 <span className="font-serif-italic" style={{ color: '#C8A54B' }}>India</span>
               </h2>
               <p style={{ fontSize: 15, lineHeight: 1.8, color: 'rgba(181,181,181,0.94)', marginBottom: 32 }}>
-                Headquartered in India, HYRUS Group operates throughout the country with integrated trade and export
-                capabilities. We are expanding nationally while building toward international expansion.
+                Headquartered in Chittoor, Andhra Pradesh, MARKSD Group operates throughout India with integrated capabilities across all our business verticals.
               </p>
-              <div className="flex flex-wrap gap-4">
-                {['North India', 'South India', 'East India', 'West India'].map((region) => (
+              
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start gap-3">
+                  <div className="w-3 h-3 rounded-full mt-1" style={{ background: '#C8A54B', boxShadow: '0 0 12px rgba(200,165,75,0.6)' }} />
+                  <div>
+                    <p style={{ fontSize: 14, fontWeight: 700, color: '#F4F4F4' }}>Headquarters</p>
+                    <p style={{ fontSize: 13, color: 'rgba(181,181,181,0.8)' }}>Chittoor, Andhra Pradesh</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-3 h-3 rounded-full mt-1" style={{ background: 'rgba(200,165,75,0.4)' }} />
+                  <div>
+                    <p style={{ fontSize: 14, fontWeight: 700, color: '#F4F4F4' }}>Future Expansion</p>
+                    <p style={{ fontSize: 13, color: 'rgba(181,181,181,0.8)' }}>Chennai, Bengaluru, Hyderabad, Mumbai, Delhi</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-2">
+                {['Andhra Pradesh', 'Tamil Nadu', 'Karnataka', 'Telangana', 'Maharashtra', 'Delhi'].map((state) => (
                   <span
-                    key={region}
-                    className="px-4 py-2 rounded-full text-sm font-medium"
+                    key={state}
+                    className="px-3 py-1.5 rounded-full text-xs font-medium"
                     style={{ background: 'rgba(200,165,75,0.08)', border: '1px solid rgba(200,165,75,0.2)', color: '#C8A54B' }}
                   >
-                    {region}
+                    {state}
                   </span>
                 ))}
               </div>
             </div>
 
-            {/* Map visualization */}
-            <div className="relative h-64 flex items-center justify-center">
+            {/* Interactive India Map */}
+            <div className="relative h-80 flex items-center justify-center">
               <div
                 className="relative w-full h-full rounded-2xl overflow-hidden flex items-center justify-center"
                 style={{ background: 'rgba(0,0,0,0.3)', border: '1px solid rgba(200,165,75,0.15)' }}
               >
-                {/* Simplified world map dots */}
-                <div className="relative w-72 h-40">
-                  {/* India highlighted dot */}
-                  <div
-                    className="absolute animate-pulse"
-                    style={{ top: '55%', left: '62%', width: 12, height: 12, borderRadius: '50%', background: '#C8A54B', boxShadow: '0 0 20px rgba(200,165,75,0.8)' }}
+                <svg viewBox="0 0 100 100" className="w-full h-full p-4" style={{ maxWidth: 400 }}>
+                  {/* Simplified India outline */}
+                  <path
+                    d="M35,5 L40,8 L45,7 L50,10 L55,8 L60,12 L62,18 L65,22 L63,28 L66,32 L64,38 L68,42 L70,48 L68,52 L72,58 L70,65 L68,70 L65,75 L62,78 L58,80 L55,75 L52,72 L50,78 L48,82 L45,85 L42,82 L40,78 L38,72 L35,68 L32,65 L30,58 L28,52 L25,48 L28,42 L26,35 L28,28 L30,22 L32,15 L35,10 Z"
+                    fill="rgba(200,165,75,0.05)"
+                    stroke="rgba(200,165,75,0.3)"
+                    strokeWidth="0.5"
                   />
-                  {/* Ripple */}
-                  <div
-                    className="absolute animate-ping"
-                    style={{ top: 'calc(55% - 4px)', left: 'calc(62% - 4px)', width: 20, height: 20, borderRadius: '50%', background: 'rgba(200,165,75,0.3)' }}
-                  />
-                  {/* Other dots */}
-                  {[
-                    { t: '45%', l: '56%' },
-                    { t: '50%', l: '75%' },
-                    { t: '60%', l: '72%' },
-                  ].map((pos, i) => (
-                    <div
-                      key={i}
-                      className="absolute"
-                      style={{ top: pos.t, left: pos.l, width: 6, height: 6, borderRadius: '50%', background: 'rgba(184,146,50,0.45)', boxShadow: '0 0 8px rgba(184,146,50,0.35)' }}
-                    />
+                  
+                  {/* City markers */}
+                  {cities.map((city) => (
+                    <g
+                      key={city.name}
+                      onMouseEnter={() => setHoveredCity(city.name)}
+                      onMouseLeave={() => setHoveredCity(null)}
+                      className="cursor-pointer"
+                    >
+                      {/* Pulse effect for HQ */}
+                      {city.type === 'HQ' && (
+                        <>
+                          <circle cx={city.x} cy={city.y} r="4" fill="rgba(200,165,75,0.2)">
+                            <animate attributeName="r" from="2" to="6" dur="1.5s" repeatCount="indefinite" />
+                            <animate attributeName="opacity" from="0.6" to="0" dur="1.5s" repeatCount="indefinite" />
+                          </circle>
+                          <circle cx={city.x} cy={city.y} r="2" fill="#C8A54B" style={{ filter: 'drop-shadow(0 0 8px rgba(200,165,75,0.8))' }} />
+                        </>
+                      )}
+                      {/* Future expansion markers */}
+                      {city.type === 'Future' && (
+                        <circle cx={city.x} cy={city.y} r="1.5" fill="rgba(200,165,75,0.5)" className="transition-all duration-200" style={{ transformOrigin: `${city.x}% ${city.y}%`, transform: hoveredCity === city.name ? 'scale(1.5)' : 'scale(1)' }} />
+                      )}
+                    </g>
                   ))}
-                  {/* Animated connection lines SVG */}
-                  <svg className="absolute inset-0 w-full h-full" style={{ opacity: 0.35 }}>
-                    <line x1="55%" y1="55%" x2="56%" y2="45%" stroke="#C8A54B" strokeWidth="1" strokeDasharray="4 4">
-                      <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="2s" repeatCount="indefinite" />
-                    </line>
-                    <line x1="55%" y1="55%" x2="75%" y2="50%" stroke="#B89232" strokeWidth="1" strokeDasharray="4 4">
-                      <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="2.5s" repeatCount="indefinite" />
-                    </line>
-                    <line x1="55%" y1="55%" x2="72%" y2="60%" stroke="#B89232" strokeWidth="1" strokeDasharray="4 4">
-                      <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="3s" repeatCount="indefinite" />
-                    </line>
-                  </svg>
-                  <p style={{ position: 'absolute', bottom: 0, left: '50%', transform: 'translateX(-50%)', fontSize: 11, color: 'rgba(181,181,181,0.72)', whiteSpace: 'nowrap', letterSpacing: '0.1em' }}>
-                    INDIA · NATIONAL OPERATIONS
-                  </p>
-                </div>
+                </svg>
+
+                {/* Tooltip */}
+                {hoveredCity && (
+                  <div
+                    className="absolute px-3 py-2 rounded-lg text-xs font-semibold pointer-events-none transition-all duration-200"
+                    style={{
+                      top: cities.find(c => c.name === hoveredCity)?.type === 'HQ' ? '68%' : `${cities.find(c => c.name === hoveredCity)?.y || 50}%`,
+                      left: `${(cities.find(c => c.name === hoveredCity)?.x || 50) + 5}%`,
+                      background: 'rgba(22,22,22,0.95)',
+                      border: '1px solid rgba(200,165,75,0.3)',
+                      color: '#C8A54B',
+                      transform: 'translateY(-50%)',
+                      whiteSpace: 'nowrap',
+                      zIndex: 20,
+                    }}
+                  >
+                    {hoveredCity}
+                    <span style={{ display: 'block', fontSize: 10, color: 'rgba(181,181,181,0.8)', fontWeight: 400 }}>
+                      {cities.find(c => c.name === hoveredCity)?.state}
+                      {cities.find(c => c.name === hoveredCity)?.type === 'HQ' && ' (HQ)'}
+                    </span>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -1215,17 +1256,41 @@ function ContactSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (status === 'loading') return
+    
+    // Validate required fields
+    if (!form.name || !form.email || !form.phone || !form.subject || !form.message) {
+      setStatus('error')
+      setStatusMessage('Please fill in all required fields.')
+      return
+    }
+    
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(form.email)) {
+      setStatus('error')
+      setStatusMessage('Please enter a valid email address.')
+      return
+    }
+    
+    // Phone validation (Indian phone numbers)
+    const phoneRegex = /^[+]?[(]?[0-9]{1,4}[)]?[-\s./0-9]*$/
+    if (!phoneRegex.test(form.phone) || form.phone.replace(/\D/g, '').length < 10) {
+      setStatus('error')
+      setStatusMessage('Please enter a valid phone number.')
+      return
+    }
+    
     setStatus('loading')
     setStatusMessage('')
     try {
       const { default: axios } = await import('axios')
-      const apiBase = import.meta.env.VITE_API_BASE_URL || 'https://marksd-backend.onrender.com'
+      const apiBase = import.meta.env.VITE_API_URL || import.meta.env.VITE_API_BASE_URL || 'https://api.marksd.co'
       const response = await axios.post(`${apiBase}/api/contact`, form, { timeout: 15000 })
       setStatus('success')
       setStatusMessage(response.data?.message || 'Enquiry submitted successfully.')
       setForm({ name: '', email: '', phone: '', company: '', subject: '', message: '' })
     } catch (error: any) {
-      const message = error?.response?.data?.message || 'Unable to submit enquiry. Please try again.'
+      const message = error?.response?.data?.message || error?.message || 'Unable to submit enquiry. Please try again.'
       setStatus('error')
       setStatusMessage(message)
     }
@@ -1240,7 +1305,7 @@ function ContactSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <SectionLabel text="CONTACT" />
         <h2 style={{ fontFamily: 'Playfair Display, Cormorant Garamond, serif', fontWeight: 800, fontSize: 'clamp(32px,5vw,56px)', color: '#F4F4F4', lineHeight: 1.1, letterSpacing: '0.02em', marginBottom: 12 }}>
-          Partner With HYRUS
+          Partner With MARKSD
         </h2>
         <p style={{ color: 'rgba(181,181,181,0.9)', fontSize: 16, maxWidth: 480, lineHeight: 1.7, marginBottom: 56 }}>
           Connect with our team to discuss partnerships, investments, and strategic business requirements.
@@ -1251,8 +1316,8 @@ function ContactSection() {
           <div className="lg:col-span-2 space-y-6">
             {[
               { icon: 'HQ', label: 'Office', value: 'Chittoor, Andhra Pradesh, India' },
-              { icon: 'PH', label: 'Phone', value: '+91 XXXXX XXXXX' },
-              { icon: 'EM', label: 'Email', value: 'info@marksdgroup.com' },
+              { icon: 'PH', label: 'Phone', value: '+91 XXXXX XXXXX', href: 'tel:+91' },
+              { icon: 'EM', label: 'Email', value: 'info@marksd.co', href: 'mailto:info@marksd.co' },
             ].map((item) => (
               <div
                 key={item.label}
@@ -1267,7 +1332,11 @@ function ContactSection() {
                 </span>
                 <div>
                   <p style={{ fontSize: 11, letterSpacing: '0.15em', color: '#C8A54B', fontWeight: 600, marginBottom: 4 }}>{item.label}</p>
-                  <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)' }}>{item.value}</p>
+                  {item.href ? (
+                    <a href={item.href} style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#C8A54B'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgba(255,255,255,0.7)'}>{item.value}</a>
+                  ) : (
+                    <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)' }}>{item.value}</p>
+                  )}
                 </div>
               </div>
             ))}
@@ -1394,7 +1463,7 @@ function Footer() {
     setNewsletterMessage('')
     try {
       const { default: axios } = await import('axios')
-      const apiBase = import.meta.env.VITE_API_BASE_URL || 'https://marksd-backend.onrender.com'
+      const apiBase = import.meta.env.VITE_API_URL || import.meta.env.VITE_API_BASE_URL || 'https://api.marksd.co'
       const response = await axios.post(`${apiBase}/api/newsletter/subscribe`, { email: newsletterEmail }, { timeout: 10000 })
       setNewsletterStatus('success')
       setNewsletterMessage(response.data?.message || 'Successfully subscribed!')
@@ -1494,7 +1563,7 @@ function Footer() {
           style={{ borderTop: '1px solid rgba(200,165,75,0.15)' }}
         >
 <p style={{ fontSize: 13, color: 'rgba(181,181,181,0.72)' }}>
-             © {new Date().getFullYear()} HYRUS Group of Companies. All rights reserved.
+             © {new Date().getFullYear()} MARKSD Group of Companies. All Rights Reserved.
            </p>
           <div className="flex gap-6">
             {['Privacy Policy', 'Terms of Service', 'Sitemap'].map((l) => (

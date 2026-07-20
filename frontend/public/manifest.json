@@ -1,0 +1,21 @@
+{
+  "name": "MARKSD Group of Companies",
+  "short_name": "MARKSD",
+  "description": "A diversified enterprise operating across multiple industries including construction, digital transformation, food processing, trade, manufacturing and industrial solutions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#C8A54B",
+  "icons": [
+    {
+      "src": "/logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}

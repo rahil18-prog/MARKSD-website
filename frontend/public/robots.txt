@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://marksd.co/sitemap.xml
+
+Host: https://marksd.co
