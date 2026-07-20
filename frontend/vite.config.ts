@@ -92,9 +92,11 @@ function figmaSiteConfiguration(config: FigmaSiteConfiguration): Plugin {
   const bodyStart = config.customScripts?.bodyStart ?? ''
   const bodyEnd = config.customScripts?.bodyEnd ?? ''
   const robotsTxt =
-  config.robots?.index === false
-    ? 'User-agent: *\nDisallow: /\n'
-    : 'User-agent: *\nAllow: /\n\nSitemap: https://www.marksd.co/sitemap.xml\n'
+`User-agent: *
+Allow: /
+
+Sitemap: https://www.marksd.co/sitemap.xml
+`
 
   return {
     name: 'figma-site-configuration',
